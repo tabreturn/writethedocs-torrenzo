@@ -1,0 +1,205 @@
+/* Theme:    TorrensUni
+   Output:   Marp Slides (HTML)
+   Version:  1.1
+   Modified: 2026-07 */
+
+
+/* =========================================
+   THEME METADATA & IMPORTS
+   ========================================= */
+
+@use 'sass:color';
+
+/*!
+ * c.tech-subject-dev theme (extends Gaia).
+ *
+ * @theme TorrensUni
+ * @author TorrensUni
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */
+
+@import 'gaia';
+
+
+/* =========================================
+   BASE DOCUMENT SETTINGS
+   ========================================= */
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+}
+
+
+/* =========================================
+   COVER SLIDE PLAY-BUTTON OVERLAY
+   ========================================= */
+
+h1:has(em strong) {
+  margin: 0;
+  transform: translateY(-50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+section:has(h1 em strong) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:has(h1 em strong)::after {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='black' stroke='white' stroke-width='4'/%3E%3Cpath d='M38 30L38 70L70 50Z' fill='white'/%3E%3C/svg%3E") center / contain no-repeat;
+  bottom: 45px;
+  content: '';
+  display: block !important;
+  height: 90px;
+  pointer-events: none;
+  position: absolute;
+  right: 50px;
+  width: 90px;
+  z-index: 5;
+}
+
+
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+h1 {
+  font-family: 'NeueFaktumExtended', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  margin-top: 1.5em !important;
+}
+
+h1 em strong {
+  color: inherit;
+  font-size: 1.2em;
+  font-style: normal;
+}
+
+h2 {
+  font-family: 'NeueFaktumExtended', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  margin-top: 1.5em;
+}
+
+
+/* =========================================
+   TEXT CONTENT
+   ========================================= */
+
+p, ul, ol {
+  margin-bottom: 0.8em;
+  margin-top: 0;
+}
+
+li {
+  margin-bottom: 0.5em !important;
+  margin-left: 0.25em !important;
+}
+
+li:has(svg) {
+  list-style-type: none;
+}
+
+blockquote {
+  bottom: 2%;
+  color: var(--color-highlight);
+  font-size: 40%;
+  left: 2%;
+  margin: 0;
+  padding: 1px 5px 2px 5px;
+  position: absolute;
+  text-align: right;
+}
+
+blockquote:after, blockquote:before {
+  content: none;
+}
+
+
+/* =========================================
+   CODE FORMATTING
+   ========================================= */
+
+code, pre {
+  background-color: transparent;
+  font-family: 'Recursive', monospace;
+  font-size: 1em;
+  padding: 0.1em !important;
+}
+
+pre code {
+  font-size: 0.85em;
+  padding: 0.1em !important;
+}
+
+code {
+  margin: 0;
+  padding: 0 !important;
+}
+
+
+/* =========================================
+   SEPARATORS
+   ========================================= */
+
+hr {
+  border: none;
+  border-top: 3px solid currentColor;
+  margin: 1em 0;
+}
+
+
+/* =========================================
+   CUSTOM TAGS
+   ========================================= */
+
+svg.absolute {
+  height: 960px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+}
+
+larger {
+  font-size: 1.3em;
+}
+
+smaller {
+  font-size: 0.7em;
+}
+
+highlight {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 -0.1em;
+  padding: 0.1em;
+  padding-bottom: 0.2em;
+}
+
+terminal {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: block;
+  font-size: 0.6em;
+  margin-top: 1.75em;
+  padding: 0 1.2em 1em 1.2em !important;
+  unicode-bidi: embed;
+  white-space: pre;
+}
+

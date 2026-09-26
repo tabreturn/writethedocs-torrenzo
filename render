@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+# Render a slide deck with the TorrensUni theme.
+# Usage: ./render [deck] [--pdf] [extra marp args...]
+#   deck  = path to a .md file, or a deck folder containing one .md
+# Default args: -w -p --html  (watch + presenter view)
+# --pdf: export <deck>.pdf beside the source (--allow-local-files)
+set -euo pipefail
+
+REPO=$(cd "$(dirname "$0")" && pwd)
+
+DECK="$REPO/marp--lms_pipeline_slides/deck.md"
+if [ $# -ge 1 ] && [ "${1:-}" != "--pdf" ]; then
+  if [ -f "$1" ]; then
+    DECK=$1
+  elif [ -d "$1" ]; then
+    DECK=$(ls "$1"/*.md 2>/dev/null | head -1)
+    [ -n "$DECK" ] || { echo "no .md found in: $1" >&2; exit 1; }
+  else
+    echo "deck not found: $1" >&2; exit 1
+  fi
+  shift
+fi
+[ -f "$DECK" ] || { echo "deck not found: $DECK" >&2; exit 1; }
+
+PDF=0
+if [ "${1:-}" = "--pdf" ]; then
+  PDF=1; shift
+fi
+
+# Concatenate theme + embedded fonts into a single CSS file (Marp does not
+# follow relative @imports, so this cat step is unavoidable).
+THEME=/tmp/torrensuni-marp.css
+cat "$REPO/style_marp/marp-base.css" "$REPO/style_marp/marp-fonts.css" > "$THEME"
+
+# Default flags = live preview; override by passing your own after the deck
+BASE=$(basename "$DECK" .md)
+if [ "$PDF" -eq 1 ]; then
+  ARGS=(--pdf --html --allow-local-files -o "$BASE.pdf" "$@")
+else
+  ARGS=("$@")
+  [ ${#ARGS[@]} -eq 0 ] && ARGS=(-w -p --html)
+fi
+
+# Prefer a global marp; fall back to the repo-local install in style_marp/.
+if ! command -v marp >/dev/null 2>&1; then
+  LOCAL_MARP="$REPO/style_marp/node_modules/.bin/marp"
+  [ -x "$LOCAL_MARP" ] || { echo "marp not found; run: npm install (in style_marp/)" >&2; exit 1; }
+  export PATH="$(dirname "$LOCAL_MARP"):$PATH"
+fi
+
+cd "$(dirname "$DECK")"
+exec marp "${ARGS[@]}" --theme "$THEME" "$(basename "$DECK")"

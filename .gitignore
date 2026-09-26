@@ -1,0 +1,22 @@
+marp--*/*.html
+marp--*/*.pdf
+
+.crush/
+
+# node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+.pnpm-store/
+.yarn/cache
+.yarn/install-state.gz
+
+# macos
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
