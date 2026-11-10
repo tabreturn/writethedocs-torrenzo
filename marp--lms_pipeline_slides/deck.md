@@ -13,13 +13,11 @@ _color: var(--color-background)
 -->
 <!--
 - a talk on shifting the source of truth for course content out of the LMS and into a publishing pipeline
-- the workflow has run across several university offerings, so this is battle-tested, not theoretical
-- bio: lecturer in ux/web/interaction design at torrens university australia; author of learn python visually
 -->
 
 ---
 
-# The Problem
+# Introductions
 <!-- 
 paginate: true
 backgroundColor: darkslategrey
@@ -28,10 +26,85 @@ color: var(--color-background)
 
 ---
 
-## The Problem » Authoring in the LMS
+## Introductions » Myself
 
-- The LMS is a good place to **deliver** a course, a poor place to **author** one
-- Authoring directly in the LMS makes it the *de facto* source of truth
+* Interactive Media Lecturer
+* Designer → Developer → Creative/Design Technologist
+* Learning content development, Author
+
+---
+
+<!--
+_backgroundColor: black
+_paginate: false
+-->
+![bg cover](portfolio.png)
+> tabreturn.com
+
+---
+
+## Introductions » You?
+
+* Who has worked with an LMS?
+* Blackboard, <highlight>Canvas,</highlight> D2L, Moodle, ...
+* 360Learning, Absorb, Docebo, TalentLMS, ... 
+* Learning Designers?
+
+<!--
+- note that i'm familiar with those popular in secondary/tertiary education
+-->
+
+---
+
+# The Problem
+<!-- 
+paginate: true
+backgroundColor: maroon
+color: var(--color-background)
+-->
+
+---
+
+## The Problem » Talk Premise
+
+### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, a poor place to <highlight>author</highlight> one*
+
+---
+
+## The Problem » Example 1
+
+
+
+
+---
+
+
+
+```bibtex
+@book{gross2018generative,
+  title         = {Generative Design: Visualize, Program, and Create with JavaScript in p5.js},
+  author        = {Gross, Benedikt and Bohnacker, Hartmut and Laub, Julia and Lazzeroni, Claudius},
+  year          = {2018},
+  publisher     = {Princeton Architectural Press},
+  address       = {New York, NY},
+  isbn          = {978-1616897581}
+}
+
+...
+
+```
+[@gross2018generative]
+```
+
+
+
+DEMO
+
+
+
+## The Problem » Talk Premise
+
+* Authoring directly in the LMS makes it the *de facto* source of truth
 - Consequences:
   - Content drift across pages and offerings
   - Limited, shallow version history
