@@ -2,6 +2,7 @@ marp--*/*.html
 marp--*/*.pdf
 
 .crush/
+AGENTS.md
 
 # node
 node_modules/
