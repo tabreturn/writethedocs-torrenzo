@@ -9,10 +9,10 @@ notes: ...
 _backgroundColor: black
 _backgroundImage: "url(title_bg.png)"
 _backgroundSize: "cover"
-_color: var(--color-background)
+color: var(--color-background)
 -->
 <!--
-- a talk on shifting the source of truth for course content out of the LMS and into a publishing pipeline
+- shifting the source of truth for course content out of the LMS and into a publishing pipeline
 -->
 
 ---
@@ -21,7 +21,6 @@ _color: var(--color-background)
 <!-- 
 paginate: true
 backgroundColor: darkslategrey
-color: var(--color-background)
 -->
 
 ---
@@ -29,8 +28,9 @@ color: var(--color-background)
 ## Introductions » Myself
 
 * Interactive Media Lecturer
-* Designer → Developer → Creative/Design Technologist
-* Learning content development, Author
+* Designer → developer → creative/design technologist
+* Industry experience in startups, multimedia studios, web departments
+* Learning developer, author, geek
 
 ---
 
@@ -45,13 +45,13 @@ _paginate: false
 
 ## Introductions » You?
 
-* Who has worked with an LMS?
+* Who has worked with an LMS (Learning Management System)?
 * Blackboard, <highlight>Canvas,</highlight> D2L, Moodle, ...
 * 360Learning, Absorb, Docebo, TalentLMS, ... 
-* Learning Designers?
+* Learning designers or educators?
 
 <!--
-- note that i'm familiar with those popular in secondary/tertiary education
+- note that i'm familiar with solutions popular in secondary/tertiary education
 -->
 
 ---
@@ -60,23 +60,178 @@ _paginate: false
 <!-- 
 paginate: true
 backgroundColor: maroon
-color: var(--color-background)
 -->
 
 ---
 
 ## The Problem » Talk Premise
 
-### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, a poor place to <highlight>author</highlight> one*
+### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, a poor place to <highlight>author</highlight> one.*
+<p>&nbsp;</p>
+<smaller>* Or, at least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
 
 ---
 
-## The Problem » Example 1
+## The Problem » Immediate Concerns ...
 
+* <highlight>`1.` Content drift:</highlight> No imports, variables, or shared blocks to stay in sync
+* <highlight>`2.` Siloed pages:</highlight> Keyhole editing, no narrative view, massive click-tax
+* <highlight>`3.` Form torture:</highlight> Clicking tiny boxes and dropdowns to build rubrics
 
-
+<!--
+- keyhole editing: u.x metaphor borrowed from joke about painting a hallway through the letterbox/keyhole
+-->
 
 ---
+
+# 1. Content Drift
+<!-- 
+paginate: true
+backgroundColor: purple
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 76%](slo_course_outline.png)
+
+* <svg data-marpit-svg class="absolute">
+    <rect x="405" y="260" width="622" height="51" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+
+> pyf200 module outline
+<!--
+- necessary for "constructive alignment" and "curriculum mapping", etc.
+- every single assessment brief, grading rubric, module, etc. maps to these ... [NEXT SLIDE]
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 70%](slo_modules.png)
+
+* <svg data-marpit-svg class="absolute">
+    <rect x="462" y="120" width="585" height="55" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+
+> pyf200 module outline
+<!--
+- ... and there are usually 12 modules ... [NEXT SLIDE]
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 70%](slo_lms_intro.png)
+
+* <svg data-marpit-svg class="absolute">
+    <rect x="470" y="542" width="560" height="55" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+
+> pyf200 module 1
+<!--
+- ... and there are usually 12 modules ... [NEXT SLIDE]
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 70%](slo_brief_pdf.png)
+
+* <svg data-marpit-svg class="absolute">
+    <rect x="660" y="396" width="290" height="37" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+
+> pyf200 module 1
+<!--
+- ... and there are usually 12 modules ... [NEXT SLIDE]
+-->
+
+---
+
+# 2. Siloed pages
+<!-- 
+paginate: true
+backgroundColor: darkgreen
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 70%](editor_styles.png)
+
+---
+
+# 2. Form Torture
+<!-- 
+paginate: true
+backgroundColor: darkgoldenrod
+color: var(--color-background)
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 70%](rubric_canvas.png)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+> pyf200 module 1
+<!--
+- ... and there are usually 12 modules ... [NEXT SLIDE]
+-->
+
+
+
+
+
+
+
 
 
 
@@ -94,9 +249,9 @@ color: var(--color-background)
 
 ```
 [@gross2018generative]
-```
 
 
+---
 
 DEMO
 
