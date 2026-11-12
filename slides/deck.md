@@ -1,11 +1,13 @@
 ---
+
 marp: true
 theme: TorrensUni
 notes: ...
+
 ---
 
 # ***The LMS as a Build Target***
-<!-- 
+<!--
 _backgroundColor: black
 _backgroundImage: "url(title_bg.png)"
 _backgroundSize: "cover"
@@ -26,8 +28,7 @@ backgroundColor: darkslategrey
 ---
 
 ## Introductions » Myself
-
-* Interactive Media Lecturer
+* Interactive media lecturer
 * Designer → developer → creative/design technologist
 * Industry experience in startups, multimedia studios, web departments
 * Learning developer, author, geek
@@ -40,21 +41,66 @@ _paginate: false
 -->
 ![bg cover](portfolio.png)
 > tabreturn.com
+<!--
+- if you'd like to view more of my work, check out my portfolio website
+-->
 
 ---
 
 ## Introductions » You?
-
 * Who has worked with an LMS (Learning Management System)?
-* Blackboard, <highlight>Canvas,</highlight> D2L, Moodle, ...
-* 360Learning, Absorb, Docebo, TalentLMS, ... 
+* Blackboard, Canvas, D2L, Moodle, ... ?
+* 360Learning, Absorb, Docebo, TalentLMS, ... ?
 * Learning designers or educators?
-
+* <svg data-marpit-svg class="absolute">
+    <rect x="300" y="235" width="124" height="49" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
 <!--
 - note that i'm familiar with solutions popular in secondary/tertiary education
+- this talk specifically concerns canvas [NEXT 2 SLIDES]
 -->
 
 ---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 95%](canvas_lms_1.png)
+> canvas lms
+<!--
+- canvas provides a presence for all of a student's enrolments
+- built-in cms for editing materials, grading features, analytics, and more
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 95%](canvas_lms_2.png)
+> canvas lms
+<!--
+- you may heard of it from the 2026 Canvas data breach
+- if you did, you'll know it affected over 8,000 educational institutions 
+- (inc. many notable australian unis, princeton, harvard, ...)
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 95%](canvas_lms_3.png)
+> canvas lms
+<!--
+- as far as editing goes, it's your standard wysiwyg affair
+-->
+
+---
+
 
 # The Problem
 <!-- 
@@ -65,7 +111,11 @@ backgroundColor: maroon
 ---
 
 ## The Problem » Talk Premise
+### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, a poor place to <highlight>author</highlight> one.*
 
+---
+
+## The Problem » Talk Premise
 ### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, a poor place to <highlight>author</highlight> one.*
 <p>&nbsp;</p>
 <smaller>* Or, at least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
@@ -74,12 +124,24 @@ backgroundColor: maroon
 
 ## The Problem » Immediate Concerns ...
 
-* <highlight>`1.` Content drift:</highlight> No imports, variables, or shared blocks to stay in sync
-* <highlight>`2.` Siloed pages:</highlight> Keyhole editing, no narrative view, massive click-tax
-* <highlight>`3.` Form torture:</highlight> Clicking tiny boxes and dropdowns to build rubrics
-
+* <highlight>`1.` Content drift</highlight>  
+  No imports, variables, or shared blocks to stay in sync
+* <highlight>`2.` Siloed pages</highlight>  
+  Keyhole editing, no narrative view, massive click-tax
+* <highlight>`3.` Form torture</highlight>  
+  Clicking tiny boxes and dropdowns to build rubrics
 <!--
 - keyhole editing: u.x metaphor borrowed from joke about painting a hallway through the letterbox/keyhole
+-->
+
+---
+
+## The Problem » Immediate Concerns ... (cont.)
+Furthermore: browser-bound, link rot, hostile to AI/CLI, shallow version history, LMS ends up the de facto source of truth but not really, and many obvious opportunities to automate and recycle ...
+<!--
+- browser-bound: slow reloads, constant tab-juggling, zero offline work
+- link rot: swapping files breaks links or serves stale cached copies
+- hostile to a.i/c.l.i: database silos block local editors, scripts, and agents
 -->
 
 ---
@@ -97,14 +159,15 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 76%](slo_course_outline.png)
-
 * <svg data-marpit-svg class="absolute">
     <rect x="405" y="260" width="622" height="51" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-
+* <svg data-marpit-svg class="absolute">
+    <rect x="952" y="550" width="74" height="65" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
 > pyf200 module outline
 <!--
-- necessary for "constructive alignment" and "curriculum mapping", etc.
+- slo necessary for "constructive alignment" and "curriculum mapping", etc.
 - every single assessment brief, grading rubric, module, etc. maps to these ... [NEXT SLIDE]
 -->
 
@@ -139,7 +202,7 @@ _paginate: false
 
 > pyf200 module 1
 <!--
-- ... and there are usually 12 modules ... [NEXT SLIDE]
+- ... and different slo items map to each module ... [NEXT SLIDE]
 -->
 
 ---
@@ -156,12 +219,27 @@ _paginate: false
 
 > pyf200 module 1
 <!--
-- ... and there are usually 12 modules ... [NEXT SLIDE]
+- ... and also to assessment breifs ... [NEXT SLIDE]
 -->
 
 ---
 
-# 2. Siloed pages
+## 1. Content Drift » Scenario
+### *Somebody needs a change to SLO (a) --*
+* Update the learning outline
+* Update (potentially) 12 module intro instances ...
+* And to find these, you'll need to click through ever module
+* Then, update (potentially) 3 assessment briefs ...
+* But those briefs are MS Word docs ...
+* That then require re-exporting as PDF, and reuploading ...
+* Only for caching to display the old version.
+<!--
+- of course, you can rename the pdf, but what other links does that break?
+-->
+
+---
+
+# 2. Siloed Pages
 <!-- 
 paginate: true
 backgroundColor: darkgreen
@@ -174,6 +252,26 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](editor_styles.png)
+<!--
+- admittedly, the global stylesheet is on use
+- but this content has been migrated from another l.m.s
+- and there are always bespoke elements that require uniform styling
+-->
+
+---
+
+## 1. Siloed Pages » Scenario
+### *All instances of the term "Twitter" need replacing --*
+* Open a page and search for "Twitter" and replace wth "X" ...
+* Open the next page and repeat (potentially 12 × 3 times)
+* Then, update (potentially) 3 assessment briefs ...
+* But those briefs are MS Word docs ...
+* That then require re-exporting as PDF, and reuploading ...
+* But this is simple: what if it's a styling change?!
+<!--
+- on the last point, there is an html view for each page ...
+- but inline styling order might vary
+-->
 
 ---
 
@@ -191,40 +289,26 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](rubric_canvas.png)
+<!---
+- dealing with grading rubrics is a fiddly affair
+- and you cannot edit them  after the submission date
+- so it needs to be accurate, and multiple sources of truth aren't conducive
+-->
+
+---
+
+## 2. Form Torture » Scenario
+### *Assessment 1 rubric require an additional criterion --*
+* Locate the relevant brief source document (MS Word) ...
+* Make the change then re-export as PDF, and reupload ...
+* Don't forget caching might bite you in the ass
+* Now manually edit the corresponding Canvas rubric.
 
 ---
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-> pyf200 module 1
-<!--
-- ... and there are usually 12 modules ... [NEXT SLIDE]
--->
 
 
 
@@ -256,21 +340,6 @@ _paginate: false
 DEMO
 
 
-
-## The Problem » Talk Premise
-
-* Authoring directly in the LMS makes it the *de facto* source of truth
-- Consequences:
-  - Content drift across pages and offerings
-  - Limited, shallow version history
-  - Format and platform lock-in
-- Observed first-hand across several university offerings
-<!--
-- the core inversion: we treat the lms as a deployment target, not a workspace
-- anyone who has copy-pasted a syllabus between three lms pages knows the drift problem
--->
-
----
 <!--
 _backgroundColor: #EEE
 _paginate: false
