@@ -42,7 +42,7 @@ if [ "$PDF" -eq 1 ]; then
   ARGS=(--pdf --html --allow-local-files -o "$BASE.pdf" "$@")
 else
   ARGS=("$@")
-  [ ${#ARGS[@]} -eq 0 ] && ARGS=(-w -p --html)
+  [ ${#ARGS[@]} -eq 0 ] && ARGS=(-w -p --html --allow-local-files)
 fi
 
 

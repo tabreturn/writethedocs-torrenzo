@@ -39,7 +39,7 @@ backgroundColor: darkslategrey
 _backgroundColor: black
 _paginate: false
 -->
-![bg cover](portfolio.png)
+![bg cover](intro_portfolio.png)
 > tabreturn.com
 <!--
 - if you'd like to view more of my work, check out my portfolio website
@@ -66,12 +66,12 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 95%](canvas_lms_1.png)
+![bg 95%](intro_canvas_1.png)
 > canvas lms
 <!--
 - provides students a single, unified hub across every course they take
 - built-in cms for editing materials; as well as grading features, analytics, and more
-- you may heard of it from the 2026 canvas data breach ...
+- you may have heard of it from the 2026 canvas data breach ...
 - over 8,000 educational institutions
 - (inc. many notable australian unis, princeton, harvard, ...)
 -->
@@ -82,7 +82,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 95%](canvas_lms_2.png)
+![bg 95%](intro_canvas_2.png)
 > canvas lms
 * <svg data-marpit-svg class="absolute">
     <rect x="112" y="140" width="165" height="235" style="fill:none;stroke:lime;stroke-width:5" />
@@ -101,7 +101,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 95%](canvas_lms_3.png)
+![bg 95%](intro_canvas_3.png)
 > canvas lms
 <!--
 - as far as editing goes, it's your standard wysiwyg / rich-text editor affair
@@ -188,7 +188,7 @@ backgroundColor: maroon
 # 1. Content Drift
 <!-- 
 paginate: true
-backgroundColor: purple
+backgroundColor: rebeccapurple
 -->
 
 ---
@@ -197,7 +197,7 @@ backgroundColor: purple
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 76%](slo_course_outline.png)
+![bg 76%](drift_course_outline.png)
 * <svg data-marpit-svg class="absolute">
     <rect x="405" y="260" width="622" height="51" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
@@ -218,7 +218,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](slo_modules.png)
+![bg 70%](drift_modules.png)
 * <svg data-marpit-svg class="absolute">
     <ellipse cx="620" cy="147" rx="20" ry="20" stroke-dasharray="3" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
@@ -235,7 +235,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](slo_lms_intro.png)
+![bg 70%](drift_module_intro.png)
 * <svg data-marpit-svg class="absolute">
     <rect x="470" y="546" width="560" height="46" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
@@ -252,7 +252,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](slo_brief_pdf.png)
+![bg 70%](drift_brief_pdf.png)
 * <svg data-marpit-svg class="absolute">
     <rect x="660" y="397" width="288" height="33" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
@@ -295,7 +295,7 @@ backgroundColor: darkgreen
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](editor_styles.png)
+![bg 70%](silo_editor_styles.png)
 <!--
 - the default headings require further styling ...
 - admittedly, the global stylesheet thing is on us
@@ -310,7 +310,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](editor_styles_note.png)
+![bg 70%](silo_callout_styles.png)
 <!--
 - like these callout notes, for example
 - let's consider 2 scenarios ... [NEXT SLIDE]
@@ -330,7 +330,7 @@ _paginate: false
 
 ## 2. Siloed Pages » Scenario 2
 ### *All instances of the term "Twitter" need replacing --*
-* Open a page and search for "Twitter" and replace wth "X" ...
+* Open a page and search for "Twitter" and replace with "X" ...
 * Open the next page and repeat (potentially 12 × 3 times)
 * Then, update (potentially) 3 assessment briefs ...
 * But those briefs are MS Word documents ...
@@ -344,7 +344,7 @@ _paginate: false
 # 3. Form Torture
 <!-- 
 paginate: true
-backgroundColor: darkgoldenrod
+backgroundColor: olive
 color: var(--color-background)
 -->
 
@@ -354,7 +354,7 @@ color: var(--color-background)
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](rubric_canvas_pdf.png)
+![bg 70%](rubric_brief_pdf.png)
 <!---
 - recall that assessment briefs are embedded pdf files
 - each assessment includes a grading rubric ... [NEXT]
@@ -377,7 +377,7 @@ _paginate: false
 ---
 
 ## 3. Form Torture » Scenario
-### *Assessment 1 rubric require an additional criterion --*
+### *Assessment 1 rubric requires an additional criterion --*
 * Locate the relevant brief source document (MS Word)
 * Make the change, then re-export as PDF and upload
 * (Don't forget caching might bite you in the butt)
@@ -387,7 +387,7 @@ _paginate: false
 
 # Solution
 <!-- 
-backgroundColor: teal
+backgroundColor: darkcyan
 color: var(--color-background)
 -->
 <!--
@@ -397,12 +397,19 @@ color: var(--color-background)
 ---
 
 ## Solution » What If?
+### *What if the LMS was just a <highlight>build target</highlight>?*
 
-Instead of wrangling Word documents, repeatedly copy-pasting, fiddling with styling, configuting rubrics,  into the LMS editor, we:
+* <highlight>write content once</highlight>, in structured source files
+* <highlight>automatically generate</highlight> LMS module pages, assessment briefs, ...
+* need a change? edit the source, rebuild, re-upload
 
-<highlight>write content once, in structured source files</highlight> then
-
-<highlight>automatically generate:</highlight> LMS module pages, assessment briefs, ...
+<p>&nbsp;</p>
+<smaller>No more Word-document wrangling, copy-paste marathons, or hand-built rubrics.</smaller>
+<!--
+- the whole pitch in one slide
+- each bullet answers one of the three problems: drift, silos, form torture
+- "need a change?" recalls the scenario slides: the answer is no longer a click-odyssey
+-->
 
 ---
 
@@ -417,10 +424,6 @@ Instead of wrangling Word documents, repeatedly copy-pasting, fiddling with styl
 ---
 
 ## Solution » SSG-Inspired Pipeline
-<!-- 
-backgroundColor: teal
-color: var(--color-background)
--->
 </h3><h3><highlight>SSG = Static Site Generator</highlight></h3>
 Takes a folder of plain-text files (usually Markdown + templates/config) and compiles them into a clean, fast HTML website -- no database or browser WYSIWYG required.
 <br /><hr style="border:none;border-top:1px solid #EEE" />
@@ -487,7 +490,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 87%](slo_yaml.png) 
+![bg 87%](solution_slo_yaml.png) 
 * <svg data-marpit-svg class="absolute">
     <rect x="504" y="260" width="530" height="38" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
@@ -504,7 +507,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 87%](slo_tag_preview.png) 
+![bg 87%](solution_tag_preview.png) 
 * <svg data-marpit-svg class="absolute">
     <rect x="410" y="400" width="148" height="20" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
@@ -523,7 +526,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 87%](obsidian_tag.png) 
+![bg 87%](solution_tag_syntax.png) 
 <!--
 - but there are around 5 key families of tags with filter-type variants
 -->
@@ -570,7 +573,7 @@ section {
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 88%](references_zotero.png)
+![bg 88%](solution_zotero.png)
 <!--
 - of course, many people use reference management software for this kind of thing
 -->
@@ -582,7 +585,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 88%](includes_tag.png)
+![bg 88%](solution_includes.png)
 <!--
 - there also also a tag for includes (inserting file contents in multiple places)
 - in this the academic intergrity statement that appears on multiple pages and in the briefs
@@ -595,7 +598,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 78%](ms_word_support.png)
+![bg 78%](solution_word_export.png)
 <!--
 - i even added some (almost vomit) ms word support, although this isn't thoroughly tested
 -->
@@ -630,7 +633,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 83%](gui_watch.png) 
+![bg 83%](solution_gui_watch.png) 
 <!--
 - this is g.u.i, although there is also c.l.i mode
 - it's a simple case of pointing to the folder for the course
@@ -654,7 +657,7 @@ color: var(--color-background)
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 87%](obsidian_edit.png) 
+![bg 87%](editing_obsidian.png) 
 <!--
 - edit with any markdown editor you prefer (obsidian in this case) ... [NEXT SLIDE]
 -->
@@ -666,7 +669,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 90%](gui_hot_reload.png)
+![bg 90%](editing_hot_reload.png)
 * <svg data-marpit-svg class="absolute">
     <rect x="170" y="85" width="465" height="80" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
@@ -712,7 +715,7 @@ color: var(--color-background)
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](img_pipeline_diagram.svg)
+![bg 70%](pipeline_diagram.svg)
 > sources in, build in the middle, LMS-ready artefacts out
 <!--
 - the whole workflow on one slide: plain-text sources in, build in the middle, lms-ready artefacts out
@@ -805,7 +808,7 @@ your-subject/
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](img_citation_keys.png)
+![bg 70%](pipeline_citation_keys.png)
 > citation keys inline in module Markdown
 <!--
 - citation keys inline in module markdown: @harper2021sensory, @marshall2020catalogue
@@ -817,7 +820,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](img_zotero_bibtex.png)
+![bg 70%](solution_zotero.png)
 > a Zotero library; the pipeline consumes its BibTeX export
 <!--
 - a zotero library: the same records that feed papers can feed course pages
@@ -847,7 +850,7 @@ _paginate: false
 
 # Around the Pipeline
 <!-- 
-backgroundColor: seagreen
+backgroundColor: olivedrab
 color: var(--color-background)
 -->
 <!--
@@ -876,9 +879,9 @@ color: var(--color-background)
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg vertical fit](img_util_banner_pyf.svg)
-![bg vertical fit](img_util_banner_cms.svg)
-![bg vertical fit](img_util_banner_jsf.svg)
+![bg vertical fit](util_banner_pyf.svg)
+![bg vertical fit](util_banner_cms.svg)
+![bg vertical fit](util_banner_jsf.svg)
 <!--
 - procedurally generated module banners: pixel-raster font, per-subject palette, seeded randomness
 - every module page gets a unique banner with zero design time
@@ -889,7 +892,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 50%](img_util_course_image.svg)
+![bg 50%](util_course_image.svg)
 > procedural course images: a rotated geometric pattern per subject
 <!--
 - the lms course tile, also generated -- same palette system as the banners
@@ -944,7 +947,7 @@ DEMO
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](img_search_obsidian.png)
+![bg 70%](payoff_search.png)
 > one search across every module, activity, and brief
 <!--
 - obsidian global search for "orange" across the whole subject in milliseconds
@@ -956,7 +959,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](img_ai_review.png)
+![bg 70%](payoff_ai_review.png)
 > an AI coding agent working directly on course source
 <!--
 - an ai coding agent working on course source: auditing citation currency, scaffolding a new module
@@ -968,7 +971,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](img_git_history.png)
+![bg 70%](payoff_git_history.png)
 > commit-level answers to "what changed, when, and why"
 <!--
 - meaningful version history at last: commit-level answers to "what changed, when, and why"
