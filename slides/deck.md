@@ -128,16 +128,28 @@ backgroundColor: maroon
 ### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, a poor place to <highlight>author</highlight> one.*
 <p>&nbsp;</p>
 <smaller>⚠️<br />Or, at least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
+<!--
+- and another caveat ... [NEXT SLIDE]
+-->
+
+---
+
+## The Problem(s) » Talk Premise
+### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, a poor place to <highlight>author</highlight> one.*
+<p>&nbsp;</p>
+<smaller>⚠️<br />Or, at least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
+<br /><br />
+<smaller>⚠️<br />Third-party Canvas plugins (LTIs) likely fix some of this, but require institutional licensing (see money) and IT sign-off, which is prohibitive.</smaller>
 
 ---
 
 ## The Problem(s) » Immediate Concerns ...
 
-* <highlight>`1.` Content drift</highlight>  
+* <highlight>`1.` Content Drift</highlight>  
   No imports, variables, or shared blocks to stay in sync
-* <highlight>`2.` Siloed pages</highlight>  
+* <highlight>`2.` Siloed Pages</highlight>  
   Keyhole editing, no narrative view, massive click-tax
-* <highlight>`3.` Form torture</highlight>  
+* <highlight>`3.` Form Torture</highlight>  
   Example: clicking tiny boxes and dropdowns to build rubrics
 <!--
 - keyhole editing: u.x metaphor borrowed from joke about painting a hallway through the letterbox/keyhole
@@ -303,9 +315,6 @@ _paginate: false
 * (alternatively, open the WYSIWYG HTML view and search the source)
 * Apply new styling manually
 * Open the next page and repeat (potentially 12 × 3 times).
-<!--
-- ...
--->
 
 ---
 
@@ -316,14 +325,10 @@ _paginate: false
 * Then, update (potentially) 3 assessment briefs ...
 * But those briefs are MS Word docs ...
 * That then require re-exporting as PDF, and uploading.
-<!--
-- on the last point, there is an html view for each page ...
-- but inline styling order might vary
--->
 
 ---
 
-# 2. Form Torture
+# 3. Form Torture
 <!-- 
 paginate: true
 backgroundColor: darkgoldenrod
@@ -345,7 +350,7 @@ _paginate: false
 
 ---
 
-## 2. Form Torture » Scenario
+## 3. Form Torture » Scenario
 ### *Assessment 1 rubric require an additional criterion --*
 * Locate the relevant brief source document (MS Word) ...
 * Make the change then re-export as PDF, and reupload ...
