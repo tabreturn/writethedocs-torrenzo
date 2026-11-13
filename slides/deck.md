@@ -31,7 +31,7 @@ backgroundColor: darkslategrey
 * Interactive media lecturer
 * Designer → developer → creative/design technologist
 * Industry experience in startups, multimedia studios, web departments
-* Learning development, author, geek
+* Learning development, authoring, geekery
 
 ---
 
@@ -72,7 +72,7 @@ _paginate: false
 - provides students a single, unified hub across every course they take
 - built-in cms for editing materials; as well as grading features, analytics, and more
 - you may heard of it from the 2026 canvas data breach ...
-- if you did, you'll know it affected over 8,000 educational institutions
+- over 8,000 educational institutions
 - (inc. many notable australian unis, princeton, harvard, ...)
 -->
 
@@ -84,9 +84,15 @@ _paginate: false
 -->
 ![bg 95%](canvas_lms_2.png)
 > canvas lms
+* <svg data-marpit-svg class="absolute">
+    <rect x="112" y="140" width="165" height="235" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+* <svg data-marpit-svg class="absolute">
+    <rect x="1011" y="140" width="231" height="478" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
 <!--
 - typical course page
-- note the left column for main navigation, and right column listing assessment deadlines
+- note [CLICK] left column for main navigation, and right column [CLICK] listing assessment deadlines
 -->
 
 ---
@@ -111,13 +117,15 @@ paginate: true
 backgroundColor: maroon
 -->
 <!--
-- things evident when i started to look at reworking courses
+- i started to look at reworking courses --
+- i'll discuss issues obvious at first glance shortly, but --
+- i reached conclusion ... [NEXT SLIDE]
 -->
 
 ---
 
 ## The Problem(s) » Talk Premise
-### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, a poor place to <highlight>author</highlight> one.*
+### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, <br />but a poor place to <highlight>author</highlight> one.*
 <!--
 - have to caveat that with ... [NEXT SLIDE]
 -->
@@ -125,9 +133,9 @@ backgroundColor: maroon
 ---
 
 ## The Problem(s) » Talk Premise
-### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, a poor place to <highlight>author</highlight> one.*
+### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, <br />but a poor place to <highlight>author</highlight> one.*
 <p>&nbsp;</p>
-<smaller>⚠️<br />Or, at least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
+<smaller>⚠️<br />At least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
 <!--
 - and another caveat ... [NEXT SLIDE]
 -->
@@ -135,11 +143,11 @@ backgroundColor: maroon
 ---
 
 ## The Problem(s) » Talk Premise
-### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, a poor place to <highlight>author</highlight> one.*
+### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, <br />but a poor place to <highlight>author</highlight> one.*
 <p>&nbsp;</p>
-<smaller>⚠️<br />Or, at least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
+<smaller>⚠️<br />At least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
 <br /><br />
-<smaller>⚠️<br />Third-party Canvas plugins (LTIs) likely fix some of this, but require institutional licensing (see money) and IT sign-off, which is prohibitive.</smaller>
+<smaller>⚠️<br />Third-party Canvas plugins (LTIs) likely address some of my gripes, but require institutional licensing (see money) and IT sign-off, which is prohibitive.</smaller>
 
 ---
 
@@ -148,7 +156,7 @@ backgroundColor: maroon
 * <highlight>`1.` Content Drift</highlight>  
   No imports, variables, or shared blocks to stay in sync
 * <highlight>`2.` Siloed Pages</highlight>  
-  Keyhole editing, no narrative view, massive click-tax
+  'Keyhole' editing, no narrative view, massive click-tax
 * <highlight>`3.` Form Torture</highlight>  
   Example: clicking tiny boxes and dropdowns to build rubrics
 <!--
@@ -161,16 +169,17 @@ backgroundColor: maroon
 - <highlight>`1.` Content Drift</highlight>  
   No imports, variables, or shared blocks to stay in sync
 - <highlight>`2.` Siloed Pages</highlight>  
-  Keyhole editing, no narrative view, massive click-tax
+  'Keyhole' editing, no narrative view, massive click-tax
 - <highlight>`3.` Form Torture</highlight>  
   Example: clicking tiny boxes and dropdowns to build rubrics
 
 <p>&nbsp;</p>
-<smaller>Furthermore: browser-bound workflow, link rot, hostile to AI/CLI work, shallow version history, general lack of automation and recycling ... And, the LMS ends up the de facto source of truth -- but not really.</smaller>
+<smaller>Furthermore: browser-bound workflow, link rot, hostile to AI/CLI work, shallow version history, general lack of automation ... And, the LMS ends up the de facto source of truth -- but not really.</smaller>
 <!--
 - browser-bound: slow reloads, constant tab-juggling, zero offline work
 - link rot: swapping files breaks links or serves stale cached copies
 - hostile to a.i/c.l.i: database silos block local editors, scripts, and agents
+- source of truth but not really: pdf source documents really on ms word
 - but, let me run through some examples ... [NEXT SLIDE]
 -->
 
@@ -211,13 +220,13 @@ _paginate: false
 -->
 ![bg 70%](slo_modules.png)
 * <svg data-marpit-svg class="absolute">
-    <rect x="462" y="120" width="585" height="55" style="fill:none;stroke:lime;stroke-width:5" />
+    <ellipse cx="620" cy="147" rx="20" ry="20" stroke-dasharray="3" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 > pyf200 course
 <!--
 - here's the thing -- there are usually 12 modules ...
 - and each intro sub-module lists its s.l.o mappings
-- lets [CLICK] navigate the the first ... [NEXT SLIDE]
+- lets [CLICK] navigate the first ... [NEXT SLIDE]
 -->
 
 ---
@@ -228,7 +237,7 @@ _paginate: false
 -->
 ![bg 70%](slo_lms_intro.png)
 * <svg data-marpit-svg class="absolute">
-    <rect x="470" y="542" width="560" height="55" style="fill:none;stroke:lime;stroke-width:5" />
+    <rect x="470" y="546" width="560" height="46" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 > pyf200 course
 <!--
@@ -245,7 +254,7 @@ _paginate: false
 -->
 ![bg 70%](slo_brief_pdf.png)
 * <svg data-marpit-svg class="absolute">
-    <rect x="660" y="396" width="290" height="37" style="fill:none;stroke:lime;stroke-width:5" />
+    <rect x="660" y="397" width="288" height="33" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 > pyf200 course
 <!--
@@ -257,11 +266,11 @@ _paginate: false
 
 ## 1. Content Drift » Scenario
 ### *Somebody needs a change to SLO (a) --*
-* Make the change to the learning outline
-* Update (potentially) 12 module intro instances ...
+* Make official change to the learning outline
+* Update (potentially) 12 module Intro instances ...
 * And to find these, you'll need to click through every module
 * Then, update (potentially) 3 assessment briefs ...
-* But those briefs are MS Word documents ...
+* But recall those briefs are MS Word documents ...
 * That then require re-exporting as PDF, and uploading ...
 * Only for caching to display the old version.
 <!--
@@ -276,8 +285,8 @@ paginate: true
 backgroundColor: darkgreen
 -->
 <!--
-- keyhole editing, no narrative view, massive click-tax
-- which also affects styling ... [NEXT SLIDE]
+- recall: keyhole editing, no narrative view, massive click-tax ...
+- this also affects styling! ... [NEXT SLIDE]
 -->
 
 ---
@@ -288,9 +297,9 @@ _paginate: false
 -->
 ![bg 70%](editor_styles.png)
 <!--
-- the default headings require further styling
+- the default headings require further styling ...
 - admittedly, the global stylesheet thing is on us
-- in defense, this content has been migrated from another l.m.s, etc.
+- in defense, this content has been migrated from another l.m.s, changing template designs, etc.
 - but, there are always bespoke elements that require uniform styling ... [NEXT SLIDE]
 -->
 > pyf200 course
@@ -304,6 +313,7 @@ _paginate: false
 ![bg 70%](editor_styles_note.png)
 <!--
 - like these callout notes, for example
+- let's consider 2 scenarios ... [NEXT SLIDE]
 -->
 > pyf200 course
 
@@ -311,9 +321,9 @@ _paginate: false
 
 ## 2. Siloed Pages » Scenario 1
 ### *All callout boxes require a different background colour --*
-* Open a page and manually scan for these elements ...
+* Open a page and visually scan for these elements ...
 * (alternatively, open the WYSIWYG HTML view and search the source)
-* Apply new styling manually
+* Then apply new styling manually
 * Open the next page and repeat (potentially 12 × 3 times).
 
 ---
@@ -323,8 +333,11 @@ _paginate: false
 * Open a page and search for "Twitter" and replace wth "X" ...
 * Open the next page and repeat (potentially 12 × 3 times)
 * Then, update (potentially) 3 assessment briefs ...
-* But those briefs are MS Word docs ...
+* But those briefs are MS Word documents ...
 * That then require re-exporting as PDF, and uploading.
+<!--
+- and on last point: don't forget caching challenges
+-->
 
 ---
 
@@ -343,6 +356,7 @@ _paginate: false
 -->
 ![bg 70%](rubric_canvas_pdf.png)
 <!---
+- recall that assessment briefs are embedded pdf files
 - each assessment includes a grading rubric ... [NEXT]
 -->
 
@@ -354,17 +368,18 @@ _paginate: false
 -->
 ![bg 70%](rubric_canvas.png)
 <!---
-- dealing with grading rubrics is a fiddly affair
-- and you cannot edit them  after the submission date
-- so it needs to be accurate, and multiple sources of truth aren't conducive
+- but the grading system is part of the l.m.s configuration, and ...
+- dealing with l.m.s grading rubrics is a fiddly affair
+- critical: you cannot edit them  after the submission date --
+- need to be accurate and consistent
 -->
 
 ---
 
 ## 3. Form Torture » Scenario
 ### *Assessment 1 rubric require an additional criterion --*
-* Locate the relevant brief source document (MS Word) ...
-* Make the change, then re-export as PDF and upload ...
+* Locate the relevant brief source document (MS Word)
+* Make the change, then re-export as PDF and upload
 * (Don't forget caching might bite you in the butt)
 * Now manually edit the corresponding Canvas rubric (fiddly business).
 
@@ -375,6 +390,29 @@ _paginate: false
 backgroundColor: teal
 color: var(--color-background)
 -->
+<!--
+- with some introduction to the problems covered, let's look at the solution
+-->
+
+---
+
+## Solution » What If?
+
+Instead of wrangling Word documents, repeatedly copy-pasting, fiddling with styling, configuting rubrics,  into the LMS editor, we:
+
+<highlight>write content once, in structured source files</highlight> then
+
+<highlight>automatically generate:</highlight> LMS module pages, assessment briefs, ...
+
+---
+
+## Solution » Mental Model
+
+- Same inversion documentarians use for docs portals:
+  - The **repository is canonical**
+  - A **build process** renders the required outputs
+  - The **LMS becomes a deployment target**
+- No bespoke platform -- just plain text and standard build tooling
 
 ---
 
@@ -416,48 +454,6 @@ structured content → automated build → lms-ready output
 - every arrow in the top chain is a manual step that can silently fail or be skipped
 - the bottom line is the whole pitch: collapse the chain into a build
 -->
-
----
-
----
-
-## Solution » Reframing
-
-<highlight>Concerns reframed as priorities:</highlght>
-
-* Meaningful version history, single-sourced metadata
-* Multi-format publishing, citation management
-* Portability and accessibility
-* Currency of learning materials, ownership by domain experts
-
----
-
-## Solution » What If ...
-
-Instead of wrangling Word documents and repeatedly copy-pasting into the LMS editor, we:
-
-<highlight>write content once, in structured source files</highlight>
-then
-<highlight>automatically generate:</highlight>
-
-- 📘 LMS module pages
-- 📄 assessment briefs
-- 📑 formatted references
-- ✨ and more
-<!--
-- "automatically" here means functionally, reliably, and usably generated
-- this question is the whole talk in one slide; everything after is implementation
--->
-
----
-
-## Solution » Mental Model
-
-- Same inversion documentarians use for docs portals:
-  - The **repository is canonical**
-  - A **build process** renders the required outputs
-  - The **LMS becomes a deployment target**
-- No bespoke platform -- just plain text and standard build tooling
 
 ---
 
