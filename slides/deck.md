@@ -397,6 +397,70 @@ Takes a folder of plain-text files (usually Markdown + templates/config) and com
 
 ---
 
+## Solution » The Manual Chain
+
+```text
+word documents → manual citation formatting → export to pdf
+ → build lms structure by hand → copy-paste page by page
+ → re-format in the lms editor → upload & embed assets
+ → retype metadata in multiple places → cross-check → qa pass
+ → rework after feedback → hotfix pages during delivery → drift
+```
+
+<hr style="border:none;border-top:1px solid #EEE" />
+
+```text
+structured content → automated build → lms-ready output
+```
+<!--
+- every arrow in the top chain is a manual step that can silently fail or be skipped
+- the bottom line is the whole pitch: collapse the chain into a build
+-->
+
+---
+
+---
+
+## Solution » Reframing
+
+<highlight>Concerns reframed as priorities:</highlght>
+
+* Meaningful version history, single-sourced metadata
+* Multi-format publishing, citation management
+* Portability and accessibility
+* Currency of learning materials, ownership by domain experts
+
+---
+
+## Solution » What If ...
+
+Instead of wrangling Word documents and repeatedly copy-pasting into the LMS editor, we:
+
+<highlight>write content once, in structured source files</highlight>
+then
+<highlight>automatically generate:</highlight>
+
+- 📘 LMS module pages
+- 📄 assessment briefs
+- 📑 formatted references
+- ✨ and more
+<!--
+- "automatically" here means functionally, reliably, and usably generated
+- this question is the whole talk in one slide; everything after is implementation
+-->
+
+---
+
+## Solution » Mental Model
+
+- Same inversion documentarians use for docs portals:
+  - The **repository is canonical**
+  - A **build process** renders the required outputs
+  - The **LMS becomes a deployment target**
+- No bespoke platform -- just plain text and standard build tooling
+
+---
+
 <!--
 _backgroundColor: #EEE
 _paginate: false
@@ -606,124 +670,15 @@ _paginate: false
 
 
 
-DEMO
 
 
 
 
-## The Problem » The Manual Chain
-
-```text
-word documents → manual citation formatting → export to pdf
- → build lms structure by hand → copy-paste page by page
- → re-format in the lms editor → upload & embed assets
- → retype metadata in multiple places → cross-check → qa pass
- → rework after feedback → hotfix pages during delivery → drift
-```
-
-<hr style="border:none;border-top:1px solid #EEE" />
-
-```text
-structured content → automated build → lms-ready output
-```
-<!--
-- every arrow in the top chain is a manual step that can silently fail or be skipped
-- the bottom line is the whole pitch: collapse the chain into a build
--->
-
----
 
 
-# The Reframing
-<!-- 
-backgroundColor: teal
-color: var(--color-background)
--->
 
----
 
-## The Reframing » A Requirements List
 
-*Complaints reframed as priorities, before building anything ...*
-
-* <highlight>Currency</highlight> of learning materials, <highlight>ownership</highlight> by domain experts
-* Meaningful <highlight>version history</highlight>, single-sourced <highlight>metadata</highlight>
-* <highlight>Multi-format</highlight> publishing, <highlight>citation</highlight> management
-* <highlight>Portability</highlight> and <highlight>accessibility</highlight>
-<!--
-- framing problems as a requirements list turned complaints into a design brief
-- ownership and single-sourced metadata ended up driving most decisions
-- this stage covers the conception, motivations, and planning of the whole approach
--->
-
----
-
-## The Reframing » What If ...
-
-Instead of wrangling Word documents and repeatedly copy-pasting into the LMS editor, we:
-
-<highlight>write content once, in structured source files</highlight>
-then
-<!--
-- the pivotal "what if" moment, before any tooling existed ... [NEXT SLIDE]
--->
-
----
-
-## The Reframing » What If ...
-
-Instead of wrangling Word documents and repeatedly copy-pasting into the LMS editor, we:
-
-<highlight>write content once, in structured source files</highlight>
-then
-<highlight>automatically generate:</highlight>
-
-- 📘 LMS module pages
-- 📄 assessment briefs
-- 📑 formatted references
-- ✨ and more
-<!--
-- "automatically" here means functionally, reliably, and usably generated
-- this question is the whole talk in one slide; everything after is implementation
--->
-
----
-
-# The Mental Model
-<!-- 
-backgroundColor: midnightblue
-color: var(--color-background)
--->
-
----
-
-## The Mental Model » Static-Site-Generator Thinking
-
-- Same inversion documentarians use for docs portals:
-  - The **repository is canonical**
-  - A **build process** renders the required outputs
-  - The **LMS becomes a deployment target**
-- No bespoke platform -- just plain text and standard build tooling
-<!--
-- if you've used jekyll, hugo, or sphinx for documentation, you already understand this talk
-- the shift is conceptual more than technical: the pipeline itself is deliberately lightweight
--->
-
----
-
-## The Mental Model » Standing on Familiar Ideas
-
-* <highlight>Publisher ecosystems:</highlight> Manning, No Starch Press, O'Reilly
-* <highlight>Static site generators:</highlight> Eleventy, Hugo, Jekyll, Pelican
-* <highlight>Docs-as-code:</highlight> Docusaurus, GitBook, MkDocs, Sphinx
-* <highlight>Document transformation:</highlight> LaTeX, Marp, Pandoc
-* <highlight>Build & publishing pipelines:</highlight> GitHub Actions, Netlify
-<!--
-- nothing here is invented: the approach borrows patterns this audience already uses daily
-- publishers have single-sourced book content for decades; course content is no different
--->
-
----
 
 # The Pipeline
 <!-- 
@@ -793,153 +748,6 @@ your-subject/
 <!--
 - obsidian gives wiki-link autocomplete and live preview of the dataview-style tags
 - the gui matters for colleagues without admin rights or terminal comfort -- ownership means everyone can build
--->
-
----
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 70%](img_obsidian.png)
-> editing a subject in Obsidian: wiki links, tags, plain Markdown
-<!--
-- editing a subject in obsidian: wiki links, live preview of outline tags, ordinary markdown
-- this is what "ownership returned to domain experts" looks like day to day
--->
-
----
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 70%](img_obsidian_split.png)
-> source mode (tags visible) vs reading view (tags resolved)
-<!--
-- left: raw source with [[outline]] tags; right: obsidian's reading view resolving them live
-- authors see populated outcomes and metadata while writing, before any build runs
--->
-
----
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 70%](img_word_authoring.png)
-> the same source, authored in MS Word
-<!--
-- the same source authored in ms word: outline tags and citation keys inline among styled text
-- word support proved the weakest link, but it lowers the entry barrier for colleagues
--->
-
----
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 70%](img_word_history.png)
-> even Word authors get version history on tagged source
-<!--
-- word online's version history over a tagged .docx source file
-- tags survive the word round-trip, so office-bound colleagues still feed the same pipeline
--->
-
----
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 70%](img_gui.png)
-> the GUI: point-and-click parity with the CLI
-<!--
-- the gui: directory picker, build options as checkboxes, live log, preview and diff buttons
-- point-and-click parity with the cli was key to adoption by non-technical colleagues
--->
-
----
-
-# Patterns & Demonstrations
-<!-- 
-backgroundColor: darkred
-color: var(--color-background)
--->
-
----
-
-## Patterns » Single-Sourced Metadata
-
-- Remember the drift screenshot? **Every retyped value becomes a tag**
-- Tags pull values from one outline file: subject code, outcomes, assessment details
-
-```text
-This assessment is worth [[outline]].assessment.a1.weighting
-of your grade for [[outline]].subject.code.
-See [[mod_02_02|the module page]] before starting.
-```
-
-- Change a value **once**; every page, brief, and cartridge picks it up
-<!--
-- direct callback to the content-drift slide: the retyped weighting/outcomes are exactly what tags replace
-- example: assessment weighting defined once, reused in the brief, module pages, and cartridge metadata
-- this is the pattern that eliminates most content drift at the source
--->
-
----
-
-## Patterns » One Syntax, Five Jobs
-
-* <highlight>Outline values:</highlight> `[[outline]].assessment.a1.weighting`
-* <highlight>Links & includes:</highlight> `[[mod_02_02|the module page]]`, `[[includes|referencing.md]]`
-* <highlight>Module values:</highlight> `[[module|n.n]]`, `[[module|name]]` -- from the filesystem
-* <highlight>Components:</highlight> `[[component.module-navigation]]`, `[[component.video|clip.mp4]]`
-* <highlight>Citations:</highlight> `[@harper2021sensory]` -- resolved against BibTeX
-<!--
-- the key insight: one wiki-link syntax unifies metadata, linking, reuse, layout, and citations
-- it's obsidian's wiki-link syntax, so authors get autocomplete and live preview for free
-- no new language to learn: if you can write a wiki link, you can use every feature
--->
-
----
-
-## Patterns » Tags Resolve by Shape
-
-From a real assessment brief -- even the H1 is a tag:
-
-```text
-# [[outline]].assessment.a1.assessment
-
-[[outline]].assessment.a1
-```
-
-- A **value** (`.weighting`) renders as a plain string
-- An **object** (`.a1`) renders as a metadata table of all its fields
-- A **list** (`[[outline]].slo`) renders as the full outcomes list
-<!--
-- same syntax, different output: the build looks at what the path points to and renders accordingly
-- the brief's own title and its due-date/weighting table are never typed by hand
-- change the weighting in outline.yaml and the brief, module pages, and cartridge all update
--->
-
----
-
-## Patterns » The Filesystem Numbers the Course
-
-```text
-modules/module_07_data_shaping/mod_07_02_pre-class.md
-
-# Module [[module|n.n]]: [[module|name]]
-```
-
-renders as ...
-
-```text
-# Module 7.2: Data Shaping
-```
-
-- Numbering, titles, and navigation derive from directory and file names
-- Reordering modules is a `git mv` -- every heading, cross-reference, and nav updates itself
-<!--
-- the most surprising payoff for docs people: no module number is ever typed in content
-- weekly-to-modular restructures, inserting a module mid-course: rename directories, rebuild, done
 -->
 
 ---
@@ -1090,6 +898,13 @@ color: var(--color-background)
 - ai-assisted review became possible only because the material is structured and local
 - the pipeline isn't all-or-nothing: teams dial automation up or down per subject
 -->
+
+---
+
+
+DEMO
+
+
 
 ---
 
