@@ -341,6 +341,17 @@ color: var(--color-background)
 _backgroundColor: #EEE
 _paginate: false
 -->
+![bg 70%](rubric_canvas_pdf.png)
+<!---
+- each assessment includes a grading rubric ... [NEXT]
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
 ![bg 70%](rubric_canvas.png)
 <!---
 - dealing with grading rubrics is a fiddly affair
@@ -353,9 +364,130 @@ _paginate: false
 ## 3. Form Torture » Scenario
 ### *Assessment 1 rubric require an additional criterion --*
 * Locate the relevant brief source document (MS Word) ...
-* Make the change then re-export as PDF, and reupload ...
-* Don't forget caching might bite you in the ass
-* Now manually edit the corresponding Canvas rubric.
+* Make the change, then re-export as PDF and upload ...
+* (Don't forget caching might bite you in the butt)
+* Now manually edit the corresponding Canvas rubric (fiddly business).
+
+---
+
+# Solution
+<!-- 
+backgroundColor: teal
+color: var(--color-background)
+-->
+
+---
+
+## Solution » SSG-Inspired Pipeline
+<!-- 
+backgroundColor: teal
+color: var(--color-background)
+-->
+</h3><h3><highlight>SSG = Static Site Generator</highlight></h3>
+Takes a folder of plain-text files (usually Markdown + templates/config) and compiles them into a clean, fast HTML website -- no database or browser WYSIWYG required.
+<br /><hr style="color:#EEE" />
+
+* **General / Blogs**  
+  *Astro, Hugo, Jekyll, Eleventy (11ty), ...*
+* **Docs / Academic / Course sites**  
+  *MkDocs, Docusaurus, Starlight (by Astro), ...*
+<!---
+- fun fact: i fell hard for s.s.g back when github pages introduced jekyll
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 90%](pipeline_diagram.svg)
+
+<svg data-marpit-svg class="absolute">
+  <defs>
+    <linearGradient id="fade-horiz" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EEE" stop-opacity="0" />
+      <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  <rect x="840" y="0" width="400" height="720" style="fill:url(#fade-horiz)" />
+</svg>
+
+* <svg data-marpit-svg class="absolute">
+    <rect x="50" y="90" width="320" height="540" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+* <svg data-marpit-svg class="absolute">
+    <rect x="525" y="90" width="295" height="540" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+> generated with mermaid
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 85%](slo_yaml.png) 
+* <svg data-marpit-svg class="absolute">
+    <rect x="504" y="262" width="525" height="38" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+> torrenzo yaml
+<!--
+- first step was to device a yaml file for all the subject metadata
+- as you can see, [CLICK] it includes s.l.o (a)
+- btw, i'm using obsidian here because it looks good (but any code editor will work)
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 85%](slo_tag_preview.png) 
+* <svg data-marpit-svg class="absolute">
+    <rect x="416" y="399" width="145" height="20" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+* <svg data-marpit-svg class="absolute">
+    <rect x="797" y="424" width="315" height="40" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+> torrenzo yaml
+<!--
+- here [CLICK] using backticks with equals for obsidian dataview syntax ...
+- which [CLICK] populates the tag in the preview
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 85%](obsidian_tag.png) 
+<!--
+- but there are around 5 key families of tags with filter-type variants
+-->
+> torrenzo cheatsheet
+
+---
+
+# Editing Environment
+<!-- 
+backgroundColor: navy
+color: var(--color-background)
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 85%](obsidian_edit.png) 
+<!--
+- edit with any markdown editor you prefer (obsidian in this case) ... [NEXT SLIDE]
+-->
+> torrenzo cheatsheet
 
 ---
 
@@ -367,7 +499,27 @@ _paginate: false
 
 
 
+---
 
+# Editing Environment
+<!-- 
+backgroundColor: navy
+color: var(--color-background)
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 85%](obsidian_edit.png) 
+<!--
+- edit with any markdown editor you prefer (obsidian in this case) ... [NEXT SLIDE]
+-->
+> torrenzo cheatsheet
+
+---
 
 
 
