@@ -465,7 +465,7 @@ then
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 90%](pipeline_diagram.svg)
+![bg 96%](pipeline_diagram.svg)
 
 <svg data-marpit-svg class="absolute">
   <defs>
@@ -474,14 +474,14 @@ _paginate: false
       <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
     </linearGradient>
   </defs>
-  <rect x="840" y="0" width="400" height="720" style="fill:url(#fade-horiz)" />
+  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz)" />
 </svg>
 
 * <svg data-marpit-svg class="absolute">
-    <rect x="50" y="90" width="320" height="540" style="fill:none;stroke:lime;stroke-width:5" />
+    <rect x="18" y="80" width="330" height="560" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 * <svg data-marpit-svg class="absolute">
-    <rect x="525" y="90" width="295" height="540" style="fill:none;stroke:lime;stroke-width:5" />
+    <rect x="525" y="80" width="295" height="560" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 > generated with mermaid
 
@@ -491,9 +491,9 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 85%](slo_yaml.png) 
+![bg 87%](slo_yaml.png) 
 * <svg data-marpit-svg class="absolute">
-    <rect x="504" y="262" width="525" height="38" style="fill:none;stroke:lime;stroke-width:5" />
+    <rect x="504" y="260" width="530" height="38" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 > torrenzo yaml
 <!--
@@ -508,12 +508,12 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 85%](slo_tag_preview.png) 
+![bg 87%](slo_tag_preview.png) 
 * <svg data-marpit-svg class="absolute">
-    <rect x="416" y="399" width="145" height="20" style="fill:none;stroke:lime;stroke-width:5" />
+    <rect x="410" y="400" width="148" height="20" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 * <svg data-marpit-svg class="absolute">
-    <rect x="797" y="424" width="315" height="40" style="fill:none;stroke:lime;stroke-width:5" />
+    <rect x="800" y="426" width="320" height="40" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 > torrenzo yaml
 <!--
@@ -527,7 +527,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 85%](obsidian_tag.png) 
+![bg 87%](obsidian_tag.png) 
 <!--
 - but there are around 5 key families of tags with filter-type variants
 -->
@@ -586,7 +586,32 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 90%](pipeline_diagram.svg)
+![bg 88%](includes_tag.png)
+<!--
+- there also also a tag for includes (inserting file contents in multiple places)
+- in this the academic intergrity statement that appears on multiple pages and in the briefs
+-->
+> obsidian
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 78%](ms_word_support.png)
+<!--
+- i even added some (almost vomit) ms word support, although this isn't thoroughly tested
+-->
+> ms word
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 96%](pipeline_diagram.svg)
 
 <svg data-marpit-svg class="absolute">
   <defs>
@@ -595,8 +620,8 @@ _paginate: false
       <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
     </linearGradient>
   </defs>
-  <rect x="840" y="0" width="400" height="720" style="fill:url(#fade-horiz2)" />
-  <rect x="380" y="344" width="136" height="84" style="fill:none;stroke:lime;stroke-width:5" />
+  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz2)" />
+  <rect x="366" y="344" width="139" height="88" style="fill:none;stroke:lime;stroke-width:5" />
 </svg>
 > generated with mermaid
 <!--
@@ -609,7 +634,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](gui_watch.png) 
+![bg 83%](gui_watch.png) 
 <!--
 - this is g.u.i, although there is also c.l.i mode
 - it's a simple case of pointing to the folder for the course
@@ -633,7 +658,7 @@ color: var(--color-background)
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 85%](obsidian_edit.png) 
+![bg 87%](obsidian_edit.png) 
 <!--
 - edit with any markdown editor you prefer (obsidian in this case) ... [NEXT SLIDE]
 -->
