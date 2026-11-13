@@ -158,11 +158,11 @@ backgroundColor: maroon
 ---
 
 ## The Problem(s) » Immediate Concerns ...
-- <highlight>`1.` Content drift</highlight>  
+- <highlight>`1.` Content Drift</highlight>  
   No imports, variables, or shared blocks to stay in sync
-- <highlight>`2.` Siloed pages</highlight>  
+- <highlight>`2.` Siloed Pages</highlight>  
   Keyhole editing, no narrative view, massive click-tax
-- <highlight>`3.` Form torture</highlight>  
+- <highlight>`3.` Form Torture</highlight>  
   Example: clicking tiny boxes and dropdowns to build rubrics
 
 <p>&nbsp;</p>
@@ -385,7 +385,7 @@ color: var(--color-background)
 -->
 </h3><h3><highlight>SSG = Static Site Generator</highlight></h3>
 Takes a folder of plain-text files (usually Markdown + templates/config) and compiles them into a clean, fast HTML website -- no database or browser WYSIWYG required.
-<br /><hr style="color:#EEE" />
+<br /><hr style="border:none;border-top:1px solid #EEE" />
 
 * **General / Blogs**  
   *Astro, Hugo, Jekyll, Eleventy (11ty), ...*
@@ -471,58 +471,18 @@ _paginate: false
 
 ---
 
-# Editing Environment
-<!-- 
-backgroundColor: navy
-color: var(--color-background)
--->
-
----
-
 <!--
-_backgroundColor: #EEE
+_backgroundColor: #000
+_color: #EEE
 _paginate: false
 -->
-![bg 85%](obsidian_edit.png) 
-<!--
-- edit with any markdown editor you prefer (obsidian in this case) ... [NEXT SLIDE]
--->
-> torrenzo cheatsheet
-
----
-
-
-
-
-
-
-
-
-
----
-
-# Editing Environment
-<!-- 
-backgroundColor: navy
-color: var(--color-background)
--->
-
----
-
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 85%](obsidian_edit.png) 
-<!--
-- edit with any markdown editor you prefer (obsidian in this case) ... [NEXT SLIDE]
--->
-> torrenzo cheatsheet
-
----
-
-
-
+<style scoped>
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+}
+</style>
 
 ```bibtex
 @book{gross2018generative,
@@ -534,77 +494,122 @@ _paginate: false
   isbn          = {978-1616897581}
 }
 
-...
+```
+<br /><hr style="border:none;border-top:1px solid #EEE" />
 
 ```
 [@gross2018generative]
-
+```
+<!--
+- and there's a tagging system for inserting bibtex references ... [NEXT SLIDE]
+-->
 
 ---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 88%](references_zotero.png)
+<!--
+- of course, many people use reference management software for this kind of thing
+-->
+> zotero
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 90%](pipeline_diagram.svg)
+
+<svg data-marpit-svg class="absolute">
+  <defs>
+    <linearGradient id="fade-horiz2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EEE" stop-opacity="0" />
+      <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  <rect x="840" y="0" width="400" height="720" style="fill:url(#fade-horiz2)" />
+  <rect x="380" y="344" width="136" height="84" style="fill:none;stroke:lime;stroke-width:5" />
+</svg>
+> generated with mermaid
+<!--
+- so what does torrenzo look like? ... [NEXT SLIDE]
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 70%](gui_watch.png) 
+<!--
+- this is g.u.i, although there is also c.l.i mode
+- it's a simple case of pointing to the folder for the course
+- the course expects a certain file structure
+- i'll explain the various checkboxes/options during the slides to come
+- in short: it builds previews and exports a version ready to import into canvas
+-->
+> torrenzo gui
+
+---
+
+# Editing Environment
+<!-- 
+backgroundColor: navy
+color: var(--color-background)
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 85%](obsidian_edit.png) 
+<!--
+- edit with any markdown editor you prefer (obsidian in this case) ... [NEXT SLIDE]
+-->
+> torrenzo cheatsheet
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 90%](gui_hot_reload.png)
+* <svg data-marpit-svg class="absolute">
+    <rect x="170" y="85" width="465" height="80" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+> vs.code
+<!--
+- using vs.code with torrenzo hot reload preview
+-->
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 DEMO
 
 
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 80%](img_content_drift_00.png)
-> a live Canvas subject: spot the retyped details ...
 
-<svg data-marpit-svg class="absolute">
-  <rect x="437" y="280" width="385" height="55" style="fill:none;stroke:lime;stroke-width:5" />
-</svg>
-<!--
-- a live canvas subject: learning outcomes and assessment details retyped across multiple pages and documents
-- here: the assessment details on a module page
--->
-
----
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 80%](img_content_drift_01.png)
-
-<svg data-marpit-svg class="absolute">
-  <rect x="560" y="355" width="262" height="95" style="fill:none;stroke:lime;stroke-width:5" />
-</svg>
-<!--
-- the same weighting and due date again, inside the embedded assessment brief pdf
--->
-
----
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 80%](img_content_drift_02.png)
-
-<svg data-marpit-svg class="absolute">
-  <rect x="358" y="363" width="518" height="40" style="fill:none;stroke:lime;stroke-width:5" />
-</svg>
-<!--
-- the learning outcomes retyped once more on the module introduction page
--->
-
----
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 80%](img_content_drift_03.png)
-
-<svg data-marpit-svg class="absolute">
-  <rect x="428" y="138" width="405" height="110" style="fill:none;stroke:lime;stroke-width:5" />
-  <rect x="359" y="540" width="545" height="143" style="fill:none;stroke:lime;stroke-width:5" />
-</svg>
-<!--
-- the same declaration text duplicated in the pdf and the page body
-- every retyped copy is a future inconsistency -- this is content drift in the wild
--->
-
----
 
 ## The Problem » The Manual Chain
 
@@ -616,7 +621,7 @@ word documents → manual citation formatting → export to pdf
  → rework after feedback → hotfix pages during delivery → drift
 ```
 
-<hr style="color:rgba(255,255,255,0.3)" />
+<hr style="border:none;border-top:1px solid #EEE" />
 
 ```text
 structured content → automated build → lms-ready output
@@ -627,30 +632,7 @@ structured content → automated build → lms-ready output
 -->
 
 ---
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 70%](img_lms_editor.png)
-> the Canvas rich content editor: built by hand, page by page
-<!--
-- the canvas rich content editor: tab navigation and formatting built by hand, page by page
-- this is where the manual chain lives -- and where every re-paste loses formatting
--->
 
----
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 70%](img_lms_formatting.png)
-> hand-formatting, heading by heading, in the LMS editor
-<!--
-- every heading, list, and table styled by hand in the rich content editor
-- repeat for every page, every offering -- and again after every paste
--->
-
----
 
 # The Reframing
 <!-- 
