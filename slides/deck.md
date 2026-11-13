@@ -31,7 +31,7 @@ backgroundColor: darkslategrey
 * Interactive media lecturer
 * Designer → developer → creative/design technologist
 * Industry experience in startups, multimedia studios, web departments
-* Learning developer, author, geek
+* Learning development, author, geek
 
 ---
 
@@ -57,7 +57,7 @@ _paginate: false
   </svg>
 <!--
 - note that i'm familiar with solutions popular in secondary/tertiary education
-- this talk specifically concerns canvas [NEXT 2 SLIDES]
+- this talk specifically concerns [CLICK] canvas ... [NEXT 2 SLIDES]
 -->
 
 ---
@@ -69,8 +69,11 @@ _paginate: false
 ![bg 95%](canvas_lms_1.png)
 > canvas lms
 <!--
-- canvas provides a presence for all of a student's enrolments
-- built-in cms for editing materials, grading features, analytics, and more
+- provides students a single, unified hub across every course they take
+- built-in cms for editing materials; as well as grading features, analytics, and more
+- you may heard of it from the 2026 canvas data breach ...
+- if you did, you'll know it affected over 8,000 educational institutions
+- (inc. many notable australian unis, princeton, harvard, ...)
 -->
 
 ---
@@ -82,9 +85,8 @@ _paginate: false
 ![bg 95%](canvas_lms_2.png)
 > canvas lms
 <!--
-- you may heard of it from the 2026 Canvas data breach
-- if you did, you'll know it affected over 8,000 educational institutions 
-- (inc. many notable australian unis, princeton, harvard, ...)
+- typical course page
+- note the left column for main navigation, and right column listing assessment deadlines
 -->
 
 ---
@@ -96,52 +98,68 @@ _paginate: false
 ![bg 95%](canvas_lms_3.png)
 > canvas lms
 <!--
-- as far as editing goes, it's your standard wysiwyg affair
+- as far as editing goes, it's your standard wysiwyg / rich-text editor affair
+- note that editing is a per-page exercise
 -->
 
 ---
 
 
-# The Problem
+# The Problem(s)
 <!-- 
 paginate: true
 backgroundColor: maroon
 -->
+<!--
+- things evident when i started to look at reworking courses
+-->
 
 ---
 
-## The Problem » Talk Premise
+## The Problem(s) » Talk Premise
 ### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, a poor place to <highlight>author</highlight> one.*
+<!--
+- have to caveat that with ... [NEXT SLIDE]
+-->
 
 ---
 
-## The Problem » Talk Premise
+## The Problem(s) » Talk Premise
 ### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, a poor place to <highlight>author</highlight> one.*
 <p>&nbsp;</p>
-<smaller>* Or, at least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
+<smaller>⚠️<br />Or, at least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
 
 ---
 
-## The Problem » Immediate Concerns ...
+## The Problem(s) » Immediate Concerns ...
 
 * <highlight>`1.` Content drift</highlight>  
   No imports, variables, or shared blocks to stay in sync
 * <highlight>`2.` Siloed pages</highlight>  
   Keyhole editing, no narrative view, massive click-tax
 * <highlight>`3.` Form torture</highlight>  
-  Clicking tiny boxes and dropdowns to build rubrics
+  Example: clicking tiny boxes and dropdowns to build rubrics
 <!--
 - keyhole editing: u.x metaphor borrowed from joke about painting a hallway through the letterbox/keyhole
 -->
 
 ---
 
-## The Problem » Immediate Concerns ... (cont.)
-Furthermore: browser-bound, link rot, hostile to AI/CLI, shallow version history, LMS ends up the de facto source of truth but not really, and many obvious opportunities to automate and recycle ...
+## The Problem(s) » Immediate Concerns ...
+- <highlight>`1.` Content drift</highlight>  
+  No imports, variables, or shared blocks to stay in sync
+- <highlight>`2.` Siloed pages</highlight>  
+  Keyhole editing, no narrative view, massive click-tax
+- <highlight>`3.` Form torture</highlight>  
+  Example: clicking tiny boxes and dropdowns to build rubrics
+
+<p>&nbsp;</p>
+<smaller>Furthermore: browser-bound workflow, link rot, hostile to AI/CLI work, shallow version history, general lack of automation and recycling ... And, the LMS ends up the de facto source of truth -- but not really.</smaller>
 <!--
 - browser-bound: slow reloads, constant tab-juggling, zero offline work
 - link rot: swapping files breaks links or serves stale cached copies
 - hostile to a.i/c.l.i: database silos block local editors, scripts, and agents
+- but, let me run through some examples ... [NEXT SLIDE]
 -->
 
 ---
@@ -165,10 +183,12 @@ _paginate: false
 * <svg data-marpit-svg class="absolute">
     <rect x="952" y="550" width="74" height="65" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-> pyf200 module outline
+> pyf200 course
 <!--
-- slo necessary for "constructive alignment" and "curriculum mapping", etc.
-- every single assessment brief, grading rubric, module, etc. maps to these ... [NEXT SLIDE]
+- anybody familiar with these kind of documents? explain ...
+- subject learning outcomes necessary for "constructive alignment" and "curriculum mapping", etc.
+- for example lets focus on s.l.o (a) [CLICK]
+- every single assessment brief [CLICK], grading rubric, module, etc. maps to these ... [NEXT SLIDE]
 -->
 
 ---
@@ -178,14 +198,14 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](slo_modules.png)
-
 * <svg data-marpit-svg class="absolute">
     <rect x="462" y="120" width="585" height="55" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-
-> pyf200 module outline
+> pyf200 course
 <!--
-- ... and there are usually 12 modules ... [NEXT SLIDE]
+- here's the thing -- there are usually 12 modules ...
+- and each intro sub-module lists its s.l.o mappings
+- lets [CLICK] navigate the the first ... [NEXT SLIDE]
 -->
 
 ---
@@ -195,14 +215,14 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](slo_lms_intro.png)
-
 * <svg data-marpit-svg class="absolute">
     <rect x="470" y="542" width="560" height="55" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-
-> pyf200 module 1
+> pyf200 course
 <!--
-- ... and different slo items map to each module ... [NEXT SLIDE]
+- note [CLICK] our friend s.l.o (a) mapped as a module outcome
+- note it doesn't list all four -- ...
+- different slo items map to different modules
 -->
 
 ---
@@ -212,26 +232,25 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](slo_brief_pdf.png)
-
 * <svg data-marpit-svg class="absolute">
     <rect x="660" y="396" width="290" height="37" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-
-> pyf200 module 1
+> pyf200 course
 <!--
-- ... and also to assessment breifs ... [NEXT SLIDE]
+- what's more: there are different s.l.o mappings for different assessment briefs
+- which are (as you might have guessed from the screenshot) embedded pdf documents
 -->
 
 ---
 
 ## 1. Content Drift » Scenario
 ### *Somebody needs a change to SLO (a) --*
-* Update the learning outline
+* Make the change to the learning outline
 * Update (potentially) 12 module intro instances ...
-* And to find these, you'll need to click through ever module
+* And to find these, you'll need to click through every module
 * Then, update (potentially) 3 assessment briefs ...
-* But those briefs are MS Word docs ...
-* That then require re-exporting as PDF, and reuploading ...
+* But those briefs are MS Word documents ...
+* That then require re-exporting as PDF, and uploading ...
 * Only for caching to display the old version.
 <!--
 - of course, you can rename the pdf, but what other links does that break?
@@ -244,6 +263,10 @@ _paginate: false
 paginate: true
 backgroundColor: darkgreen
 -->
+<!--
+- keyhole editing, no narrative view, massive click-tax
+- which also affects styling ... [NEXT SLIDE]
+-->
 
 ---
 
@@ -253,21 +276,46 @@ _paginate: false
 -->
 ![bg 70%](editor_styles.png)
 <!--
-- admittedly, the global stylesheet is on use
-- but this content has been migrated from another l.m.s
-- and there are always bespoke elements that require uniform styling
+- the default headings require further styling
+- admittedly, the global stylesheet thing is on us
+- in defense, this content has been migrated from another l.m.s, etc.
+- but, there are always bespoke elements that require uniform styling ... [NEXT SLIDE]
+-->
+> pyf200 course
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 70%](editor_styles_note.png)
+<!--
+- like these callout notes, for example
+-->
+> pyf200 course
+
+---
+
+## 2. Siloed Pages » Scenario 1
+### *All callout boxes require a different background colour --*
+* Open a page and manually scan for these elements ...
+* (alternatively, open the WYSIWYG HTML view and search the source)
+* Apply new styling manually
+* Open the next page and repeat (potentially 12 × 3 times).
+<!--
+- ...
 -->
 
 ---
 
-## 1. Siloed Pages » Scenario
+## 2. Siloed Pages » Scenario 2
 ### *All instances of the term "Twitter" need replacing --*
 * Open a page and search for "Twitter" and replace wth "X" ...
 * Open the next page and repeat (potentially 12 × 3 times)
 * Then, update (potentially) 3 assessment briefs ...
 * But those briefs are MS Word docs ...
-* That then require re-exporting as PDF, and reuploading ...
-* But this is simple: what if it's a styling change?!
+* That then require re-exporting as PDF, and uploading.
 <!--
 - on the last point, there is an html view for each page ...
 - but inline styling order might vary
