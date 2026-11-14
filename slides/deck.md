@@ -611,6 +611,18 @@ _paginate: false
 
 ---
 
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 88%](rubric_obsidian.png)
+<!--
+- and on rubrics, everything in the markdown table auto-populates in the l.m.s
+-->
+> rubric
+
+---
+
 # Workflow
 <!-- 
 backgroundColor: navy
@@ -689,7 +701,7 @@ _paginate: false
 <!--
 - recall: edit with any markdown editor you prefer (obsidian in this case) ... [NEXT SLIDE]
 -->
-> torrenzo obsidian
+> obsidian
 
 ---
 
@@ -708,24 +720,24 @@ _paginate: false
 
 ---
 
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 96%](pipeline_diagram.svg)
 
+<svg data-marpit-svg class="absolute">
+  <defs>
+    <linearGradient id="fade-horiz3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EEE" stop-opacity="0" />
+      <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz3)" />
+  <ellipse cx="1048" cy="365" rx="200" ry="200" stroke-dasharray="3" style="fill:none;stroke:lime;stroke-width:5" />
+</svg>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+> generated with mermaid
 
 ---
 
@@ -733,14 +745,53 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](pipeline_diagram.svg)
-> sources in, build in the middle, LMS-ready artefacts out
-<!--
-- the whole workflow on one slide: plain-text sources in, build in the middle, lms-ready artefacts out
-- everything to the right of the build step is disposable and regenerable
--->
+![bg 96%](pipeline_diagram.svg)
+> generated with mermaid
 
 ---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 70%](canvas_import.png)
+<!--
+- ...
+-->
+> ...
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## The Pipeline » Author Experience
 
