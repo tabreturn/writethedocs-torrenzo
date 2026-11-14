@@ -198,13 +198,13 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 76%](drift_course_outline.png)
+> pyf200 course
 * <svg data-marpit-svg class="absolute">
     <rect x="405" y="260" width="622" height="51" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 * <svg data-marpit-svg class="absolute">
     <rect x="952" y="550" width="74" height="65" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-> pyf200 course
 <!--
 - anybody familiar with these kind of documents? explain ...
 - subject learning outcomes necessary for "constructive alignment" and "curriculum mapping", etc.
@@ -219,10 +219,10 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](drift_modules.png)
+> pyf200 course
 * <svg data-marpit-svg class="absolute">
     <ellipse cx="620" cy="147" rx="20" ry="20" stroke-dasharray="3" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-> pyf200 course
 <!--
 - here's the thing -- there are usually 12 modules ...
 - and each intro sub-module lists its s.l.o mappings
@@ -236,10 +236,10 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](drift_module_intro.png)
+> pyf200 course
 * <svg data-marpit-svg class="absolute">
     <rect x="470" y="546" width="560" height="46" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-> pyf200 course
 <!--
 - note [CLICK] our friend s.l.o (a) mapped as a module outcome
 - note it doesn't list all four -- ...
@@ -253,10 +253,10 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](drift_brief_pdf.png)
+> pyf200 course
 * <svg data-marpit-svg class="absolute">
     <rect x="660" y="397" width="288" height="33" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-> pyf200 course
 <!--
 - what's more: there are different s.l.o mappings for different assessment briefs
 - which are (as you might have guessed from the screenshot) embedded pdf documents
@@ -344,7 +344,7 @@ _paginate: false
 # 3. Form Torture
 <!-- 
 paginate: true
-backgroundColor: olive
+backgroundColor: indigo
 color: var(--color-background)
 -->
 
@@ -355,6 +355,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](rubric_brief_pdf.png)
+> pyf200 assessment pdf
 <!---
 - recall that assessment briefs are embedded pdf files
 - each assessment includes a grading rubric ... [NEXT]
@@ -367,6 +368,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](rubric_canvas.png)
+> canvas rubric
 <!---
 - but the grading system is part of the l.m.s configuration, and ...
 - dealing with l.m.s grading rubrics is a fiddly affair
@@ -396,66 +398,52 @@ color: var(--color-background)
 
 ---
 
-## Solution » What If?
-### *What if the LMS was just a <highlight>build target</highlight>?*
+## Solution » What If ...
+<hr style="border:none;border-top:1px solid #EEE" />
 
-* <highlight>write content once</highlight>, in structured source files
-* <highlight>automatically generate</highlight> LMS module pages, assessment briefs, ...
-* need a change? edit the source, rebuild, re-upload
+<larger>***The LMS is just a build target?***</larger>
 
-<p>&nbsp;</p>
-<smaller>No more Word-document wrangling, copy-paste marathons, or hand-built rubrics.</smaller>
-<!--
-- the whole pitch in one slide
-- each bullet answers one of the three problems: drift, silos, form torture
-- "need a change?" recalls the scenario slides: the answer is no longer a click-odyssey
--->
+<hr style="border:none;border-top:1px solid #EEE" /><br />
+
+* <highlight>Write content once</highlight> in structured source files
+* <highlight>Automatically generate</highlight> LMS module pages, assessment briefs, ...
+* Need a change? Edit those source materials, rebuild, re-upload.
 
 ---
 
 ## Solution » Mental Model
 
-- Same inversion documentarians use for docs portals:
-  - The **repository is canonical**
-  - A **build process** renders the required outputs
-  - The **LMS becomes a deployment target**
-- No bespoke platform -- just plain text and standard build tooling
-
----
-
-## Solution » SSG-Inspired Pipeline
-</h3><h3><highlight>SSG = Static Site Generator</highlight></h3>
-Takes a folder of plain-text files (usually Markdown + templates/config) and compiles them into a clean, fast HTML website -- no database or browser WYSIWYG required.
-<br /><hr style="border:none;border-top:1px solid #EEE" />
-
-* **General / Blogs**  
-  *Astro, Hugo, Jekyll, Eleventy (11ty), ...*
-* **Docs / Academic / Course sites**  
-  *MkDocs, Docusaurus, Starlight (by Astro), ...*
-<!---
-- fun fact: i fell hard for s.s.g back when github pages introduced jekyll
+Same inversion documentarians use for modern docs portals --
+* The (Git?) repository is the *source of truth*
+* A build step *renders the outputs*
+* The website is just a *deployment target*
+<!--
+- and of specific inspiration to me was ... [NEXT SLIDE]
 -->
 
 ---
 
-## Solution » The Manual Chain
+## Solution » SSG-Inspired Pipeline
+<h3><highlight>Static Site Generators</highlight></h3>
+<!--
+- (in case anybody is not aware) ... [NEXT SLIDE]
+-->
 
-```text
-word documents → manual citation formatting → export to pdf
- → build lms structure by hand → copy-paste page by page
- → re-format in the lms editor → upload & embed assets
- → retype metadata in multiple places → cross-check → qa pass
- → rework after feedback → hotfix pages during delivery → drift
-```
+---
+
+## Solution » SSG-Inspired Pipeline
+<h3><highlight>Static Site Generators</highlight></h3>
+
+*Takes a folder of plain-text files (usually Markdown + templates & config) and compiles them into a clean, fast HTML website -- no database or browser WYSIWYG required.*
 
 <hr style="border:none;border-top:1px solid #EEE" />
 
-```text
-structured content → automated build → lms-ready output
-```
-<!--
-- every arrow in the top chain is a manual step that can silently fail or be skipped
-- the bottom line is the whole pitch: collapse the chain into a build
+* **General / Blogs**  
+  *Astro, Hugo, Jekyll, Eleventy, ...*
+* **Docs / Guides**  
+  *MkDocs, Docusaurus, Starlight (by Astro), ...*
+<!---
+- fun fact: i fell hard for s.s.g back when github pages introduced jekyll
 -->
 
 ---
@@ -465,6 +453,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 96%](pipeline_diagram.svg)
+> generated with mermaid
 
 <svg data-marpit-svg class="absolute">
   <defs>
@@ -482,7 +471,9 @@ _paginate: false
 * <svg data-marpit-svg class="absolute">
     <rect x="525" y="80" width="295" height="560" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-> generated with mermaid
+<!--
+- torrenzo is the name of the software
+-->
 
 ---
 
@@ -490,15 +481,16 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 87%](solution_slo_yaml.png) 
+![bg 87%](solution_slo_yaml.png)
+> torrenzo yaml
 * <svg data-marpit-svg class="absolute">
     <rect x="504" y="260" width="530" height="38" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-> torrenzo yaml
 <!--
 - first step was to device a yaml file for all the subject metadata
 - as you can see, [CLICK] it includes s.l.o (a)
-- btw, i'm using obsidian here because it looks good (but any code editor will work)
+- btw, i'm using obsidian here because it looks good ...
+- but any text/code editor will work ... [NEXT SLIDE]
 -->
 
 ---
@@ -507,15 +499,31 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 87%](solution_tag_preview.png) 
+![bg 78%](solution_word_export.png)
+<!--
+- i even added some (almost vomit) ms word support, although this isn't thoroughly tested
+-->
+> ms word
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 87%](solution_tag_preview.png)
+> torrenzo yaml
+* <svg data-marpit-svg class="absolute">
+    <rect x="170" y="205" width="211" height="207" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
 * <svg data-marpit-svg class="absolute">
     <rect x="410" y="400" width="148" height="20" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 * <svg data-marpit-svg class="absolute">
     <rect x="800" y="426" width="320" height="40" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-> torrenzo yaml
 <!--
+- note that torrenzo [CLICK] expects a certain directory and file-naming convention
 - here [CLICK] using backticks with equals for obsidian dataview syntax ...
 - which [CLICK] populates the tag in the preview
 -->
@@ -541,12 +549,10 @@ _paginate: false
 -->
 <style scoped>
 section {
-  display: flex;
-  flex-direction: column;
+  display: flex; flex-direction: column;
   justify-content: center !important;
 }
 </style>
-
 ```bibtex
 @book{gross2018generative,
   title         = {Generative Design: Visualize, Program, and Create with JavaScript in p5.js},
@@ -556,14 +562,14 @@ section {
   address       = {New York, NY},
   isbn          = {978-1616897581}
 }
-
 ```
 <br /><hr style="border:none;border-top:1px solid #EEE" />
-
 ```
 [@gross2018generative]
 ```
 <!--
+- this enables torrenzo to insert any in-text citations,
+- along with corresponding entry (at the page bottom) 
 - and there's a tagging system for inserting bibtex references ... [NEXT SLIDE]
 -->
 
@@ -586,66 +592,26 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 88%](solution_includes.png)
+> torrenzo includes
+* <svg data-marpit-svg class="absolute">
+    <rect x="163" y="120" width="211" height="20" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+* <svg data-marpit-svg class="absolute">
+    <rect x="500" y="68" width="154" height="20" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+* <svg data-marpit-svg class="absolute">
+    <line x1="856" y1="88" x2="1078" y2="88" style="fill:none;stroke:lime;stroke-width:5" />
+    <rect x="792" y="347" width="204" height="20" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
 <!--
-- there also also a tag for includes (inserting file contents in multiple places)
-- in this the academic intergrity statement that appears on multiple pages and in the briefs
--->
-> obsidian
-
----
-
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 78%](solution_word_export.png)
-<!--
-- i even added some (almost vomit) ms word support, although this isn't thoroughly tested
--->
-> ms word
-
----
-
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 96%](pipeline_diagram.svg)
-
-<svg data-marpit-svg class="absolute">
-  <defs>
-    <linearGradient id="fade-horiz2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#EEE" stop-opacity="0" />
-      <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
-    </linearGradient>
-  </defs>
-  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz2)" />
-  <rect x="366" y="344" width="139" height="88" style="fill:none;stroke:lime;stroke-width:5" />
-</svg>
-> generated with mermaid
-<!--
-- so what does torrenzo look like? ... [NEXT SLIDE]
+- there also also a tag for [CLICK] includes (inserting file contents in multiple places)
+- here, the [CLICK] academic integrity statement ... 
+- that appears [CLICK] on multiple pages and in the assessment briefs
 -->
 
 ---
 
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 83%](solution_gui_watch.png) 
-<!--
-- this is g.u.i, although there is also c.l.i mode
-- it's a simple case of pointing to the folder for the course
-- the course expects a certain file structure
-- i'll explain the various checkboxes/options during the slides to come
-- in short: it builds previews and exports a version ready to import into canvas
--->
-> torrenzo gui
-
----
-
-# Editing Environment
+# Workflow
 <!-- 
 backgroundColor: navy
 color: var(--color-background)
@@ -657,11 +623,73 @@ color: var(--color-background)
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 87%](editing_obsidian.png) 
+![bg 96%](pipeline_diagram.svg)
+> generated with mermaid
+
+<svg data-marpit-svg class="absolute">
+  <defs>
+    <linearGradient id="fade-horiz2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EEE" stop-opacity="0" />
+      <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz2)" />
+  <rect x="366" y="344" width="139" height="88" style="fill:none;stroke:lime;stroke-width:5" />
+</svg>
 <!--
-- edit with any markdown editor you prefer (obsidian in this case) ... [NEXT SLIDE]
+- central to the workflow is torrenzo ... [NEXT SLIDE]
 -->
-> torrenzo cheatsheet
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 83%](solution_gui_watch.png)
+> torrenzo gui
+* <svg data-marpit-svg class="absolute">
+    <line x1="180" y1="98" x2="508" y2="98" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+* <svg data-marpit-svg class="absolute">
+    <line x1="180" y1="161" x2="820" y2="161" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+* <svg data-marpit-svg class="absolute">
+    <line x1="180" y1="209" x2="508" y2="209" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+<!--
+- this is g.u.i, although there is also c.l.i mode
+- it's a simple case of [CLICK] pointing to the folder for the course
+- i'll explain the various [CLICK] checkboxes/options during the slides to come
+- the [CLICK] run
+- in short: it builds previews and exports a version ready to import into canvas
+-->
+
+---
+
+## Workflow » Filesystem-Driven
+
+```text
+your-course/
+├── outline.yaml  # single source of metadata
+├── assessments/  # assessment_<n>/ass_<n>_brief.md → PDF
+├── includes/     # reusable snippets
+├── modules/      # module_<n>/mod_<n>_<seq>_<name>.md → HTML
+├── notes/        # lecturer-only material
+└── build/        # generated output
+```
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 87%](editing_obsidian.png)
+<!--
+- recall: edit with any markdown editor you prefer (obsidian in this case) ... [NEXT SLIDE]
+-->
+> torrenzo obsidian
 
 ---
 
@@ -670,12 +698,12 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 90%](editing_hot_reload.png)
+> vs.code
 * <svg data-marpit-svg class="absolute">
     <rect x="170" y="85" width="465" height="80" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
-> vs.code
 <!--
-- using vs.code with torrenzo hot reload preview
+- using vs.code with [CLICK] torrenzo hot reload preview
 -->
 
 ---
@@ -699,18 +727,8 @@ _paginate: false
 
 
 
-
-
-
-
-
-# The Pipeline
-<!-- 
-backgroundColor: indigo
-color: var(--color-background)
--->
-
 ---
+
 <!--
 _backgroundColor: #EEE
 _paginate: false
@@ -720,45 +738,6 @@ _paginate: false
 <!--
 - the whole workflow on one slide: plain-text sources in, build in the middle, lms-ready artefacts out
 - everything to the right of the build step is disposable and regenerable
--->
-
----
-
-## The Pipeline » End to End
-
-- Sources: **YAML** (metadata) + **Markdown** (content) + **BibTeX** (references)
-
-| Input | Output |
-| --- | --- |
-| Module pages | HTML module pages |
-| Assessment briefs | PDF briefs |
-| Teaching notes | HTML notes |
-| Everything above | Common Cartridge (`.imscc`) |
-
-- The cartridge bulk-imports into **Canvas**
-<!--
-- the single cartridge import is what turns an update from weeks of lms clicking into minutes
-- bibtex feeds a managed citation pipeline rather than hand-typed references
--->
-
----
-
-## The Pipeline » Filesystem-Driven
-
-```text
-your-subject/
-├── outline.yaml        # single source of metadata
-├── modules/            # module_<n>/mod_<n>_<seq>_<name>.md → HTML
-├── assessments/        # assessment_<n>/ass_<n>_brief.md → PDF
-├── includes/           # reusable snippets
-├── notes/              # lecturer-only material
-└── build/              # generated output
-```
-
-- File names and directory structure determine how content is processed
-<!--
-- no config beyond the outline: naming conventions drive the build, like a static site generator's content folder
-- lecturer notes ship in the cartridge as an unpublished module hidden from students
 -->
 
 ---
