@@ -839,7 +839,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](pipeline_citation_keys.png)
-> citation keys inline in module Markdown
+> module markdown
 <!--
 - citation keys inline in module markdown: @harper2021sensory, @marshall2020catalogue
 - the build resolves each key against references.bib and renders the formatted list per page
@@ -851,7 +851,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](solution_zotero.png)
-> a Zotero library; the pipeline consumes its BibTeX export
+> zotero
 <!--
 - a zotero library: the same records that feed papers can feed course pages
 - authors keep their existing reference workflow; the pipeline consumes its bibtex export
@@ -912,6 +912,7 @@ _paginate: false
 ![bg vertical fit](util_banner_pyf.svg)
 ![bg vertical fit](util_banner_cms.svg)
 ![bg vertical fit](util_banner_jsf.svg)
+> generated with torrenzo
 <!--
 - procedurally generated module banners: pixel-raster font, per-subject palette, seeded randomness
 - every module page gets a unique banner with zero design time
@@ -923,7 +924,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 50%](util_course_image.svg)
-> procedural course images: a rotated geometric pattern per subject
+> generated with torrenzo
 <!--
 - the lms course tile, also generated -- same palette system as the banners
 - rerun with a new seed for a fresh set; consistency without a designer in the loop
@@ -978,7 +979,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](payoff_search.png)
-> one search across every module, activity, and brief
+> obsidian
 <!--
 - obsidian global search for "orange" across the whole subject in milliseconds
 - compare: searching an lms means clicking into every page
@@ -990,7 +991,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](payoff_ai_review.png)
-> an AI coding agent working directly on course source
+> crush ai agent
 <!--
 - an ai coding agent working on course source: auditing citation currency, scaffolding a new module
 - impossible against an lms database; trivial against a folder of markdown
@@ -1002,7 +1003,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](payoff_git_history.png)
-> commit-level answers to "what changed, when, and why"
+> git history
 <!--
 - meaningful version history at last: commit-level answers to "what changed, when, and why"
 - compare with an lms edit log -- if one exists at all
