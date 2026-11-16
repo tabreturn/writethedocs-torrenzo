@@ -33,6 +33,11 @@
   font-size: 1.75rem;
 }
 
+/* override gaia's web-loaded Lato so the deck works offline */
+section {
+  font-family: 'Montserrat', sans-serif;
+}
+
 
 /* =========================================
    COVER SLIDE PLAY-BUTTON OVERLAY
