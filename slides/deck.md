@@ -1,7 +1,7 @@
 ---
 
 marp: true
-theme: TorrensUni
+theme: tabreturn
 notes: ...
 
 ---
