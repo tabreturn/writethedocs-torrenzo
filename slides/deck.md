@@ -31,7 +31,6 @@ backgroundColor: darkslategrey
 * Interactive media lecturer
 * Designer → developer → creative/design technologist
 * Industry experience in startups, multimedia studios, web departments
-* Learning development, authoring, geekery
 
 ---
 
@@ -69,7 +68,7 @@ _paginate: false
 ![bg 95%](intro_canvas_1.png)
 > canvas lms
 <!--
-- provides students a single, unified hub across every course they take
+- provides students a single, unified hub across every course/subject they take
 - built-in cms for editing materials; as well as grading features, analytics, and more
 - you may have heard of it from the 2026 canvas data breach ...
 - over 8,000 educational institutions
@@ -91,7 +90,7 @@ _paginate: false
     <rect x="1011" y="140" width="231" height="478" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 <!--
-- typical course page
+- typical subject page
 - note [CLICK] left column for main navigation, and right column [CLICK] listing assessment deadlines
 -->
 
@@ -117,7 +116,7 @@ paginate: true
 backgroundColor: maroon
 -->
 <!--
-- i started to look at reworking courses --
+- i started to look at reworking subjects --
 - i'll discuss issues obvious at first glance shortly, but --
 - i reached conclusion ... [NEXT SLIDE]
 -->
@@ -125,7 +124,7 @@ backgroundColor: maroon
 ---
 
 ## The Problem(s) » Talk Premise
-### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, <br />but a poor place to <highlight>author</highlight> one.*
+### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a subject, <br />but a poor place to <highlight>author</highlight> one.*
 <!--
 - have to caveat that with ... [NEXT SLIDE]
 -->
@@ -133,7 +132,7 @@ backgroundColor: maroon
 ---
 
 ## The Problem(s) » Talk Premise
-### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, <br />but a poor place to <highlight>author</highlight> one.*
+### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a subject, <br />but a poor place to <highlight>author</highlight> one.*
 <p>&nbsp;</p>
 <smaller>⚠️<br />At least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
 <!--
@@ -143,7 +142,7 @@ backgroundColor: maroon
 ---
 
 ## The Problem(s) » Talk Premise
-### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a course, <br />but a poor place to <highlight>author</highlight> one.*
+### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a subject, <br />but a poor place to <highlight>author</highlight> one.*
 <p>&nbsp;</p>
 <smaller>⚠️<br />At least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
 <br /><br />
@@ -174,11 +173,11 @@ backgroundColor: maroon
   Example: clicking tiny boxes and dropdowns to build rubrics
 
 <p>&nbsp;</p>
-<smaller>Furthermore: browser-bound workflow, link rot, hostile to AI/CLI work, shallow version history, general lack of automation ... And, the LMS ends up the de facto source of truth -- but not really.</smaller>
+<smaller>Furthermore: browser-bound workflow, hostile to AI/CLI work, link rot, shallow version history, general lack of automation ... And, the LMS ends up the de facto source of truth -- but not really.</smaller>
 <!--
 - browser-bound: slow reloads, constant tab-juggling, zero offline work
-- link rot: swapping files breaks links or serves stale cached copies
 - hostile to a.i/c.l.i: database silos block local editors, scripts, and agents
+- link rot: swapping files breaks links or serves stale cached copies
 - source of truth but not really: pdf source documents really on ms word
 - but, let me run through some examples ... [NEXT SLIDE]
 -->
@@ -190,6 +189,9 @@ backgroundColor: maroon
 paginate: true
 backgroundColor: rebeccapurple
 -->
+<!--
+- recall: no imports, variables, or shared blocks to stay in sync
+-->
 
 ---
 
@@ -197,8 +199,8 @@ backgroundColor: rebeccapurple
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 76%](drift_course_outline.png)
-> pyf200 course
+![bg 76%](drift_subject_outline.png)
+> pyf200 subject
 * <svg data-marpit-svg class="absolute">
     <rect x="405" y="260" width="622" height="51" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
@@ -219,7 +221,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](drift_modules.png)
-> pyf200 course
+> pyf200 subject
 * <svg data-marpit-svg class="absolute">
     <ellipse cx="620" cy="147" rx="20" ry="20" stroke-dasharray="3" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
@@ -236,7 +238,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](drift_module_intro.png)
-> pyf200 course
+> pyf200 subject
 * <svg data-marpit-svg class="absolute">
     <rect x="470" y="546" width="560" height="46" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
@@ -253,7 +255,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 70%](drift_brief_pdf.png)
-> pyf200 course
+> pyf200 subject
 * <svg data-marpit-svg class="absolute">
     <rect x="660" y="397" width="288" height="33" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
@@ -270,11 +272,11 @@ _paginate: false
 * Update (potentially) 12 module Intro instances ...
 * And to find these, you'll need to click through every module
 * Then, update (potentially) 3 assessment briefs ...
-* But recall those briefs are MS Word documents ...
+* But those brief source files are MS Word documents ...
 * That then require re-exporting as PDF, and uploading ...
 * Only for caching to display the old version.
 <!--
-- of course, you can rename the pdf, but what other links does that break?
+- of course, you can rename the pdf, but what other links does that break? (see link rot)
 -->
 
 ---
@@ -302,7 +304,7 @@ _paginate: false
 - in defense, this content has been migrated from another l.m.s, changing template designs, etc.
 - but, there are always bespoke elements that require uniform styling ... [NEXT SLIDE]
 -->
-> pyf200 course
+> pyf200 subject
 
 ---
 
@@ -315,7 +317,7 @@ _paginate: false
 - like these callout notes, for example
 - let's consider 2 scenarios ... [NEXT SLIDE]
 -->
-> pyf200 course
+> pyf200 subject
 
 ---
 
@@ -346,6 +348,9 @@ _paginate: false
 paginate: true
 backgroundColor: indigo
 color: var(--color-background)
+-->
+<!--
+- recall: clicking many tiny boxes and dropdowns
 -->
 
 ---
@@ -393,7 +398,7 @@ backgroundColor: darkcyan
 color: var(--color-background)
 -->
 <!--
-- with some introduction to the problems covered, let's look at the solution
+- with some introduction to *some* of the problems, let's look at the solution i devised
 -->
 
 ---
@@ -416,7 +421,7 @@ color: var(--color-background)
 Same inversion documentarians use for modern docs portals --
 * The (Git?) repository is the *source of truth*
 * A build step *renders the outputs*
-* The website is just a *deployment target*
+* The website is just the *deployment target*
 <!--
 - and of specific inspiration to me was ... [NEXT SLIDE]
 -->
@@ -434,14 +439,14 @@ Same inversion documentarians use for modern docs portals --
 ## Solution » SSG-Inspired Pipeline
 <h3><highlight>Static Site Generators</highlight></h3>
 
-*Takes a folder of plain-text files (usually Markdown + templates & config) and compiles them into a clean, fast HTML website -- no database or browser WYSIWYG required.*
+*Compiles a structured folder of plain-text files -- following specific directory, naming, and metadata conventions -- into a clean, fast HTML website with no database or WYSIWYG required.*
 
 <hr style="border:none;border-top:1px solid #EEE" />
 
 * **General / Blogs**  
-  *Astro, Hugo, Jekyll, Eleventy, ...*
+  *Hugo, Jekyll, Eleventy, ...*
 * **Docs / Guides**  
-  *MkDocs, Docusaurus, Starlight (by Astro), ...*
+  *MkDocs, Docusaurus, VitePress, ...*
 <!---
 - fun fact: i fell hard for s.s.g back when github pages introduced jekyll
 -->
@@ -457,12 +462,12 @@ _paginate: false
 
 <svg data-marpit-svg class="absolute">
   <defs>
-    <linearGradient id="fade-horiz" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="fade-horiz0" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#EEE" stop-opacity="0" />
       <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
     </linearGradient>
   </defs>
-  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz)" />
+  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz0)" />
 </svg>
 
 * <svg data-marpit-svg class="absolute">
@@ -474,6 +479,28 @@ _paginate: false
 <!--
 - torrenzo is the name of the software
 -->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 96%](pipeline_diagram.svg)
+> generated with mermaid
+
+<svg data-marpit-svg class="absolute">
+  <defs>
+    <linearGradient id="fade-horiz1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EEE" stop-opacity="0" />
+      <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz1)" />
+</svg>
+<svg data-marpit-svg class="absolute">
+  <rect x="58" y="128" width="247" height="97" rx="10px" style="fill:none;stroke:red;stroke-width:5" />
+</svg>
 
 ---
 
@@ -499,11 +526,21 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 78%](solution_word_export.png)
-<!--
-- i even added some (almost vomit) ms word support, although this isn't thoroughly tested
--->
-> ms word
+![bg 96%](pipeline_diagram.svg)
+> generated with mermaid
+
+<svg data-marpit-svg class="absolute">
+  <defs>
+    <linearGradient id="fade-horiz2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EEE" stop-opacity="0" />
+      <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz2)" />
+</svg>
+<svg data-marpit-svg class="absolute">
+  <rect x="58" y="273" width="247" height="97" rx="10px" style="fill:none;stroke:red;stroke-width:5" />
+</svg>
 
 ---
 
@@ -527,6 +564,18 @@ _paginate: false
 - here [CLICK] using backticks with equals for obsidian dataview syntax ...
 - which [CLICK] populates the tag in the preview
 -->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 78%](solution_word_export.png)
+<!--
+- i even added some (almost vomit) ms word support, although this isn't thoroughly tested
+-->
+> ms word
 
 ---
 
@@ -591,6 +640,28 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
+![bg 96%](pipeline_diagram.svg)
+> generated with mermaid
+
+<svg data-marpit-svg class="absolute">
+  <defs>
+    <linearGradient id="fade-horiz3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EEE" stop-opacity="0" />
+      <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz3)" />
+</svg>
+<svg data-marpit-svg class="absolute">
+  <rect x="75" y="418" width="214" height="73" rx="10px" style="fill:none;stroke:red;stroke-width:5" />
+</svg>
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
 ![bg 88%](solution_includes.png)
 > torrenzo includes
 * <svg data-marpit-svg class="absolute">
@@ -605,6 +676,7 @@ _paginate: false
   </svg>
 <!--
 - there also also a tag for [CLICK] includes (inserting file contents in multiple places)
+- note that this works in modules and briefs
 - here, the [CLICK] academic integrity statement ... 
 - that appears [CLICK] on multiple pages and in the assessment briefs
 -->
@@ -623,10 +695,13 @@ _paginate: false
 
 ---
 
-# Workflow
+# Torrenzo
 <!-- 
 backgroundColor: navy
 color: var(--color-background)
+-->
+<!--
+- now let's focus on what makes it all work: torrenzo [NEXT SLIDE]
 -->
 
 ---
@@ -640,16 +715,16 @@ _paginate: false
 
 <svg data-marpit-svg class="absolute">
   <defs>
-    <linearGradient id="fade-horiz2" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="fade-horiz4" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#EEE" stop-opacity="0" />
       <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
     </linearGradient>
   </defs>
-  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz2)" />
+  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz4)" />
   <rect x="366" y="344" width="139" height="88" style="fill:none;stroke:lime;stroke-width:5" />
 </svg>
 <!--
-- central to the workflow is torrenzo ... [NEXT SLIDE]
+- this has a g.u.i, although there is also c.l.i mode ... [NEXT SLIDE]
 -->
 
 ---
@@ -670,19 +745,17 @@ _paginate: false
     <line x1="180" y1="209" x2="508" y2="209" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 <!--
-- this is g.u.i, although there is also c.l.i mode
-- it's a simple case of [CLICK] pointing to the folder for the course
+- it's a simple case of [CLICK] pointing to the folder for the subject
 - i'll explain the various [CLICK] checkboxes/options during the slides to come
-- the [CLICK] run
-- in short: it builds previews and exports a version ready to import into canvas
+- the [CLICK] preview, build, etc.
 -->
 
 ---
 
-## Workflow » Filesystem-Driven
+## Torrenzo » Filesystem-Driven
 
 ```text
-your-course/
+your-subject/
 ├── outline.yaml  # single source of metadata
 ├── assessments/  # assessment_<n>/ass_<n>_brief.md → PDF
 ├── includes/     # reusable snippets
@@ -690,6 +763,9 @@ your-course/
 ├── notes/        # lecturer-only material
 └── build/        # generated output
 ```
+<!--
+- as with other s.s.g solutions, it's intuitive enough when one views a populated project
+-->
 
 ---
 
@@ -700,6 +776,7 @@ _paginate: false
 ![bg 87%](editing_obsidian.png)
 <!--
 - recall: edit with any markdown editor you prefer (obsidian in this case) ... [NEXT SLIDE]
+- or even ms word (almost vomit)
 -->
 > obsidian
 
@@ -715,7 +792,7 @@ _paginate: false
     <rect x="170" y="85" width="465" height="80" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 <!--
-- using vs.code with [CLICK] torrenzo hot reload preview
+- using vs.code with [CLICK] torrenzo --watch for hot reload preview in browser
 -->
 
 ---
@@ -728,16 +805,19 @@ _paginate: false
 
 <svg data-marpit-svg class="absolute">
   <defs>
-    <linearGradient id="fade-horiz3" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="fade-horiz5" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#EEE" stop-opacity="0" />
       <stop offset="40%" stop-color="#EEE" stop-opacity="1" />
     </linearGradient>
   </defs>
-  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz3)" />
+  <rect x="840" y="0" width="440" height="720" style="fill:url(#fade-horiz5)" />
   <ellipse cx="1048" cy="365" rx="200" ry="200" stroke-dasharray="3" style="fill:none;stroke:lime;stroke-width:5" />
 </svg>
 
 > generated with mermaid
+<!--
+- ... but there's been this bit of the diagram i've concealed so far ... [NEXT SLIDE]
+-->
 
 ---
 
@@ -747,6 +827,12 @@ _paginate: false
 -->
 ![bg 96%](pipeline_diagram.svg)
 > generated with mermaid
+<!--
+- ... building and importing into canvas
+-->
+* <svg data-marpit-svg class="absolute">
+    <rect x="170" y="85" width="465" height="80" style="fill:none;stroke:red;stroke-width:5" />
+  </svg>
 
 ---
 
@@ -853,7 +939,7 @@ _paginate: false
 ![bg 70%](solution_zotero.png)
 > zotero
 <!--
-- a zotero library: the same records that feed papers can feed course pages
+- a zotero library: the same records that feed papers can feed subject pages
 - authors keep their existing reference workflow; the pipeline consumes its bibtex export
 -->
 
@@ -891,7 +977,7 @@ color: var(--color-background)
 
 ## Around the Pipeline » Utility Scripts
 
-* <highlight>Procedural graphics:</highlight> per-module banner SVGs and course images,  
+* <highlight>Procedural graphics:</highlight> per-module banner SVGs and subject images,  
   generated from a script -- one palette per subject
 * <highlight>Word sync:</highlight> planner/outline `.docx` updated from `outline.yaml`,  
   editing tracked changes in place
@@ -923,10 +1009,10 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 50%](util_course_image.svg)
+![bg 50%](util_subject_image.svg)
 > generated with torrenzo
 <!--
-- the lms course tile, also generated -- same palette system as the banners
+- the lms subject tile, also generated -- same palette system as the banners
 - rerun with a new seed for a fresh set; consistency without a designer in the loop
 -->
 
@@ -993,7 +1079,7 @@ _paginate: false
 ![bg 70%](payoff_ai_review.png)
 > crush ai agent
 <!--
-- an ai coding agent working on course source: auditing citation currency, scaffolding a new module
+- an ai coding agent working on subject source: auditing citation currency, scaffolding a new module
 - impossible against an lms database; trivial against a folder of markdown
 -->
 
@@ -1052,7 +1138,7 @@ color: var(--color-background)
 * Expect platform quirks -- budget for a manual final 5 percent
 <!--
 - the workflow is lightweight by design: yaml, markdown, bibtex, and a build script
-- next step for anyone curious: start with one module, not a whole course
+- next step for anyone curious: start with one module, not a whole subject
 -->
 
 ---
