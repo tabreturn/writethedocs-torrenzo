@@ -688,7 +688,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 88%](rubric_obsidian.png)
+![bg 88%](solution_rubric.png)
 <!--
 - and on rubrics, everything in the markdown table auto-populates in the l.m.s
 -->
@@ -841,7 +841,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](cc_spec.png)
+![bg 70%](torrenzo_cc_spec.png)
 <!--
 - zip archive (.imscc): bundles course files and assets into a single portable package
 - root manifest (imsmanifest.xml): defines file paths, metadata, and course hierarchy
@@ -856,7 +856,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](canvas_import.png)
+![bg 70%](torrenzo_canvas_import.png)
 <!--
 - ...
 -->
@@ -866,7 +866,7 @@ _paginate: false
 
 # Pipeline Utilities
 <!-- 
-backgroundColor: olivedrab
+backgroundColor: steelblue
 color: var(--color-background)
 -->
 <!--
@@ -875,17 +875,22 @@ color: var(--color-background)
 
 ---
 
-## Around the Pipeline » Utility Scripts
+## Pipeline Utilities » Utility Scripts
 
-* <highlight>Procedural graphics:</highlight> per-module banner SVGs and subject images,  
-  generated from a script -- one palette per subject
-* <highlight>PDF conversion:</highlight> outline/planner documents rendered via headless LibreOffice
-* <highlight>Video covers:</highlight> a 2-second title slide muxed onto every module video,  
-  title derived from the filename
+<highlight>`util_generate_procedural_gfx.py`</highlight>  
+<smaller>per-module banner SVGs and course images, one palette per subject, seeded randomness</smaller>
+
+<highlight>`util_generate_video_covers.py`</highlight>  
+<smaller>a 2-second title slide muxed onto every module video, title derived from the filename</smaller>
+
+<highlight>`util_generate_subtitles.py`</highlight>  
+<smaller>draft WebVTT subtitles transcribed by Whisper, never clobbering hand-corrected files</smaller>
+
+<highlight>`util_linter.py`</highlight>  
+<smaller>enforces repo conventions: link direction, spelling, rubric weightings, and more</smaller>
 <!--
 - small scripts, same philosophy: the source of truth generates everything downstream
-- word sync matters for compliance: the university process wants .docx with tracked changes
-- video covers are idempotent -- a metadata marker means re-runs skip processed files
+- covers and subtitles are idempotent -- re-runs skip processed or hand-corrected files
 -->
 
 ---
@@ -896,7 +901,7 @@ _paginate: false
 ![bg vertical fit](util_banner_pyf.svg)
 ![bg vertical fit](util_banner_cms.svg)
 ![bg vertical fit](util_banner_jsf.svg)
-> generated with torrenzo
+> util_generate_subtitles.py
 <!--
 - procedurally generated module banners: pixel-raster font, per-subject palette, seeded randomness
 - every module page gets a unique banner with zero design time
@@ -907,11 +912,11 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 50%](util_subject_image.svg)
-> generated with torrenzo
+![bg 83%](util_video_cover.png)
+> util_generate_video_covers.py
 <!--
-- the lms subject tile, also generated -- same palette system as the banners
-- rerun with a new seed for a fresh set; consistency without a designer in the loop
+- every module video opens with this 2-second cover -- title derived from the filename
+- a metadata marker makes re-runs idempotent; rename the file and a fresh cover is muxed in
 -->
 
 ---
@@ -940,13 +945,6 @@ color: var(--color-background)
 
 ---
 
-
-DEMO
-
-
-
----
-
 ## The Payoff » A Complete, Local Project
 
 - **Search everything** -- file manager, editor, or `grep` across all source
@@ -962,8 +960,8 @@ DEMO
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](payoff_search.png)
-> obsidian
+![bg 88%](payoff_search.png)
+> obsidian find & replace
 <!--
 - obsidian global search for "orange" across the whole subject in milliseconds
 - compare: searching an lms means clicking into every page
@@ -974,7 +972,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](payoff_ai_review.png)
+![bg 77%](payoff_ai_review.png)
 > crush ai agent
 <!--
 - an ai coding agent working on subject source: auditing citation currency, scaffolding a new module
@@ -986,7 +984,7 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
-![bg 70%](payoff_git_history.png)
+![bg 83%](payoff_git_history.png)
 > git history
 <!--
 - meaningful version history at last: commit-level answers to "what changed, when, and why"

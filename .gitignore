@@ -2,6 +2,7 @@ slides/*.html
 slides/*.pdf
 
 .crush/
+crushrc
 AGENTS.md
 
 # node
