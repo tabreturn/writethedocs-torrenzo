@@ -631,6 +631,7 @@ _paginate: false
 ![bg 88%](solution_zotero.png)
 <!--
 - of course, many people use reference management software for this kind of thing
+- (this is zotero, but there are mendeley and others)
 -->
 > zotero
 
@@ -831,8 +832,23 @@ _paginate: false
 - ... building and importing into canvas
 -->
 * <svg data-marpit-svg class="absolute">
-    <rect x="170" y="85" width="465" height="80" style="fill:none;stroke:red;stroke-width:5" />
+    <rect x="855" y="291" width="187" height="75" rx="10" style="fill:none;stroke:red;stroke-width:5" />
   </svg>
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
+![bg 70%](cc_spec.png)
+<!--
+- zip archive (.imscc): bundles course files and assets into a single portable package
+- root manifest (imsmanifest.xml): defines file paths, metadata, and course hierarchy
+- lms interoperability: standardised format across canvas, moodle, blackboard
+
+-->
+> 1edtech.org
 
 ---
 
@@ -848,123 +864,7 @@ _paginate: false
 
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## The Pipeline » Author Experience
-
-* <highlight>Any editor:</highlight> Obsidian, VS Code, Vim, even MS Word
-* <highlight>Incremental builds:</highlight> only changed files rebuild; orphans pruned
-* <highlight>Watch mode:</highlight> live-reload browser preview
-* <highlight>GUI:</highlight> point-and-click builds (no terminal required)
-<!--
-- obsidian gives wiki-link autocomplete and live preview of the dataview-style tags
-- the gui matters for colleagues without admin rights or terminal comfort -- ownership means everyone can build
--->
-
----
-
-## Patterns » Wiki Links & Includes
-
-| Syntax | Renders as |
-| --- | --- |
-| `[[mod_01_02_oranges]]` | *Module 1.2: Oranges* (auto label) |
-| `[[assessment_01\|Brief]]` | *Brief* (custom label) |
-| `[[includes\|referencing.md]]` | inlined reusable content |
-
-- Links rewrite per target: `.html` for browser preview, Canvas tokens for the cartridge
-<!--
-- wiki links are sugar; plain markdown links work too and .md rewrites to .html automatically
-- includes resolve before tag processing, so shared snippets can themselves contain tags
-- auto labels come from the same filesystem derivation as module numbering
--->
-
----
-
-## Patterns » Citations That Manage Themselves
-
-- Sources live in one **BibTeX** file per subject (`references.bib`)
-- In-text citations use `[@refname]`; the build renders formatted references per page
-- Reference managers (Zotero, etc.) export BibTeX -- academia's existing plumbing
-<!--
-- bibtex underpins automated citation formatting across academia, yet lms workflows largely bypass it
-- apa7 formatting comes from the build, so no hand-formatted reference lists to drift
--->
-
----
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 70%](pipeline_citation_keys.png)
-> module markdown
-<!--
-- citation keys inline in module markdown: @harper2021sensory, @marshall2020catalogue
-- the build resolves each key against references.bib and renders the formatted list per page
--->
-
----
-<!--
-_backgroundColor: #EEE
-_paginate: false
--->
-![bg 70%](solution_zotero.png)
-> zotero
-<!--
-- a zotero library: the same records that feed papers can feed subject pages
-- authors keep their existing reference workflow; the pipeline consumes its bibtex export
--->
-
----
-
-## Patterns » Multi-Format & the Diff Tool
-
-- Same source renders to HTML pages, PDF briefs, teaching notes, and the cartridge
-- A diff tool compares a local build against a **live Canvas export**
-- Answers the question: *"What actually changed on the platform?"*
-
-| Category | Meaning |
-| --- | --- |
-| `*` CHANGES | content, points, or checksum differ |
-| `−` LIVE-ONLY | exists on Canvas, not in local build |
-| `→` REBUILT, SAME | re-rendered but identical |
-<!--
-- the diff tool exists because the lms's own version history can't answer that question usefully
-- pages compared by normalised body content; pdfs by text checksum with timestamps stripped
-- enables targeted manual updates when a full cartridge import is overkill or restricted
--->
-
----
-
-# Around the Pipeline
+# Pipeline Utilities
 <!-- 
 backgroundColor: olivedrab
 color: var(--color-background)
@@ -979,8 +879,6 @@ color: var(--color-background)
 
 * <highlight>Procedural graphics:</highlight> per-module banner SVGs and subject images,  
   generated from a script -- one palette per subject
-* <highlight>Word sync:</highlight> planner/outline `.docx` updated from `outline.yaml`,  
-  editing tracked changes in place
 * <highlight>PDF conversion:</highlight> outline/planner documents rendered via headless LibreOffice
 * <highlight>Video covers:</highlight> a 2-second title slide muxed onto every module video,  
   title derived from the filename
