@@ -1,6 +1,6 @@
 # The LMS as a Build Target
 
-*Slides for a [Write the Docs](https://www.writethedocs.org/conf/australia/2026/) talk on moving course content from the LMS to a plain-text build pipeline using [Torrenzo](https://github.com/tabreturn/torrenzo).*
+*[Write the Docs 2026](https://www.writethedocs.org/conf/australia/2026/) slides on [Torrenzo](https://github.com/tabreturn/torrenzo), a lightweight plain-text course publishing pipeline*
 
 ---
 
