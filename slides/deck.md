@@ -68,7 +68,7 @@ _paginate: false
 ![bg 95%](intro_canvas_1.png)
 > canvas lms
 <!--
-- provides students a single, unified hub across every course/subject they take
+- canvas provides students a single, unified hub across every course/subject they take
 - built-in cms for editing materials; as well as grading features, analytics, and more
 - you may have heard of it from the 2026 canvas data breach ...
 - over 8,000 educational institutions
@@ -118,7 +118,7 @@ backgroundColor: maroon
 <!--
 - i started to look at reworking subjects --
 - i'll discuss issues obvious at first glance shortly, but --
-- i reached conclusion ... [NEXT SLIDE]
+- i reached the ultimate conclusion that ... [NEXT SLIDE]
 -->
 
 ---
@@ -173,7 +173,7 @@ backgroundColor: maroon
   Example: clicking tiny boxes and dropdowns to build rubrics
 
 <p>&nbsp;</p>
-<smaller>Furthermore: browser-bound workflow, hostile to AI/CLI work, link rot, shallow version history, general lack of automation ... And, the LMS ends up the de facto source of truth -- but not really.</smaller>
+<smaller>Furthermore: browser-bound workflow, hostile to AI/CLI work, link rot, shallow version history, general lack of automation ... And, the LMS ends up the de facto source of truth <i>-- but not really.</i></smaller>
 <!--
 - browser-bound: slow reloads, constant tab-juggling, zero offline work
 - hostile to a.i/c.l.i: database silos block local editors, scripts, and agents
@@ -210,7 +210,7 @@ _paginate: false
 <!--
 - anybody familiar with these kind of documents? explain ...
 - subject learning outcomes necessary for "constructive alignment" and "curriculum mapping", etc.
-- for example lets focus on s.l.o (a) [CLICK]
+- for example let us focus on s.l.o (a) [CLICK]
 - every single assessment brief [CLICK], grading rubric, module, etc. maps to these ... [NEXT SLIDE]
 -->
 
@@ -244,7 +244,7 @@ _paginate: false
   </svg>
 <!--
 - note [CLICK] our friend s.l.o (a) mapped as a module outcome
-- note it doesn't list all four -- ...
+- note it doesn't list all four --
 - different slo items map to different modules
 -->
 
@@ -377,8 +377,8 @@ _paginate: false
 <!---
 - but the grading system is part of the l.m.s configuration, and ...
 - dealing with l.m.s grading rubrics is a fiddly affair
-- critical: you cannot edit them  after the submission date --
-- need to be accurate and consistent
+- critical: you cannot edit them after the submission date --
+- need to be accurate and consistent!
 -->
 
 ---
@@ -617,9 +617,10 @@ section {
 [@gross2018generative]
 ```
 <!--
+- also includes tags for referencing --
 - this enables torrenzo to insert any in-text citations,
-- along with corresponding entry (at the page bottom) 
-- and there's a tagging system for inserting bibtex references ... [NEXT SLIDE]
+- along with corresponding refernce list entry (at the page bottom, wikipedia style) 
+- note this is bibtex ... [NEXT SLIDE]
 -->
 
 ---
@@ -630,7 +631,7 @@ _paginate: false
 -->
 ![bg 88%](solution_zotero.png)
 <!--
-- of course, many people use reference management software for this kind of thing
+- meaning you can you any reference management software you like
 - (this is zotero, but there are mendeley and others)
 -->
 > zotero
@@ -676,10 +677,11 @@ _paginate: false
     <rect x="792" y="347" width="204" height="20" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 <!--
+- recall that briefs used to be word docs, requiring pdf export (straddling source of truth)
 - there also also a tag for [CLICK] includes (inserting file contents in multiple places)
-- note that this works in modules and briefs
+- (this works in modules and briefs)
 - here, the [CLICK] academic integrity statement ... 
-- that appears [CLICK] on multiple pages and in the assessment briefs
+- that appears [CLICK] in the assessment briefs (and on multiple pages)
 -->
 
 ---
@@ -794,6 +796,7 @@ _paginate: false
   </svg>
 <!--
 - using vs.code with [CLICK] torrenzo --watch for hot reload preview in browser
+- (this is actually the way i always work)
 -->
 
 ---
@@ -843,10 +846,10 @@ _paginate: false
 -->
 ![bg 70%](torrenzo_cc_spec.png)
 <!--
-- zip archive (.imscc): bundles course files and assets into a single portable package
-- root manifest (imsmanifest.xml): defines file paths, metadata, and course hierarchy
-- lms interoperability: standardised format across canvas, moodle, blackboard
-
+- offers lms interoperability (standardised format across canvas, moodle, blackboard)
+- you can poke about the spec if you wish, but basically --
+- zip archive (.imscc extension): to bundle course files and assets into a single portable package
+- root manifest xml (imsmanifest.xml): defines file paths, metadata, and course hierarchy
 -->
 > 1edtech.org
 
@@ -856,9 +859,34 @@ _paginate: false
 _backgroundColor: #EEE
 _paginate: false
 -->
+![bg 83%](solution_gui_build.png)
+> torrenzo gui
+
+* <svg data-marpit-svg class="absolute">
+     <rect x="176" y="120" width="60" height="49" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+* <svg data-marpit-svg class="absolute">
+     <rect x="382" y="120" width="139" height="49" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+* <svg data-marpit-svg class="absolute">
+     <rect x="598" y="120" width="223" height="49" style="fill:none;stroke:lime;stroke-width:5" />
+  </svg>
+
+<!--
+- typical build settings [CLICK x3 & EXPLAIN]
+-->
+
+---
+
+<!--
+_backgroundColor: #EEE
+_paginate: false
+-->
 ![bg 70%](torrenzo_canvas_import.png)
 <!--
-- ...
+- importing on canvas side
+- it has some sensible rules (only overwrites files not manually edited in canvas)
+- (and alerts if/where things that could not overwrite)
 -->
 > canvas cartridge import
 
@@ -870,7 +898,8 @@ backgroundColor: steelblue
 color: var(--color-background)
 -->
 <!--
-- a build pipeline attracts small utility scripts that automate the fiddly edges
+- small utility scripts that automate the fiddly edges
+- (not integrated into torrenzo g.u.i ... yet?)
 -->
 
 ---
@@ -889,8 +918,7 @@ color: var(--color-background)
 <highlight>`util_linter.py`</highlight>  
 <smaller>enforces repo conventions: link direction, spelling, rubric weightings, and more</smaller>
 <!--
-- small scripts, same philosophy: the source of truth generates everything downstream
-- covers and subtitles are idempotent -- re-runs skip processed or hand-corrected files
+- don't dwell on this slide
 -->
 
 ---
@@ -920,6 +948,36 @@ _paginate: false
 -->
 
 ---
+<!--
+_backgroundColor: #000
+_paginate: false
+-->
+```
+== sub_pyf200 ==
+  [error] sub_pyf200/modules/module_02/mod_02_02_pre-class.md:18: reversed link [[Module 3|mod_03_01_introduction]] -- use [[file|Label]] order
+  [error] sub_pyf200/modules/module_02/mod_02_02_pre-class.md:42: US spelling: "color"
+  [error] sub_pyf200/modules/module_02/mod_02_02_pre-class.md:58: British identifier in code: "bar_colour" -- code naming is always American
+  [error] sub_pyf200/modules/module_02/mod_02_02_pre-class.md: bibtex footer comment missing or not verbatim
+  [error] sub_pyf200/modules/module_02/mod_02_01_introduction.md:1: introduction H1 must use [[module|sub-name]]
+  [error] sub_pyf200/modules/module_03/mod_03_02_pre-class.md:1: pre-class H1 must use [[module|name]]
+  [error] sub_pyf200/modules/module_02/mod_02_03_activities.md: missing "## Assessment Progression" section
+  [error] sub_pyf200/notes/notes_mod_03.md: activity headings do not mirror student file: ['Loops'] vs ['Loops', 'Patterns']
+  [error] sub_pyf200/assessments/assessment_01/ass_01_brief.md:44: rubric header row not in canonical form
+  [error] sub_pyf200/assessments/assessment_01/ass_01_brief.md:44: rubric weightings sum to 90%, expected 100%
+  [error] sub_pyf200/modules/module_03/assets/old_example.png: asset never referenced in markdown
+  [draft] sub_pyf200/modules/module_03/mod_03_01_introduction.md:1: under-construction marker
+  [draft] sub_pyf200/modules/module_03/mod_03_02_pre-class.md:12: possible ALL-CAPS TODO line
+  [draft] sub_pyf200/modules/module_03/mod_03_03_activities.md:22: placeholder media reference
+
+Exit code: 1 (11 errors and 3 draft warnings).
+```
+> util_linter.py
+<!--
+- coverage -- links, spelling, code names, headings, bibtex, activities, notes, rubrics, assets, drafts
+- [error] -- convention violation
+- [draft] -- unfinished-content warning
+-->
+---
 
 # The Payoff
 <!-- 
@@ -930,32 +988,32 @@ color: var(--color-background)
 ---
 
 ## The Payoff » What Improved
+<p>&nbsp;</p>
 
-* <highlight>Ownership:</highlight> returned to domain experts -- plain text they control
-* <highlight>Speed:</highlight> updates to rapidly changing content, **weeks » minutes**
-* <highlight>Maintenance:</highlight> version control, metadata, citations, and reuse all improved
-* <highlight>AI-assisted review:</highlight> enabled by structured, local source material
-
-<smaller>There is room for more or less automation -- the pipeline can be calibrated per subject and team.</smaller>
+### *Speed, Ownership, Maintenance, AI-Assisted Review*
 <!--
-- the update-time drop is the headline for faculty committees
-- ai-assisted review became possible only because the material is structured and local
 - the pipeline isn't all-or-nothing: teams dial automation up or down per subject
+- and on the last point ... [NEXT SLIDE]
 -->
 
 ---
 
-## The Payoff » A Complete, Local Project
+## The Payoff » Complete, Local Project
 
-- **Search everything** -- file manager, editor, or `grep` across all source
-- **Automated and batch checks** -- broken links, missing citations, orphans
-- **AI review** -- flag outdated content, references, or material needing clarity
+🔎 **Search everything**
+<smaller>File manager, editor, or `grep` across all source</smaller><br /><br />
+
+✅ **Automated and batch checks**
+<smaller>Broken links, missing citations, orphans (upon build and linter)</smaller><br /><br />
+
+🤖 **AI review**
+<smaller>Flag outdated content, references, or material needing clarity</smaller><br /><br />
 <!--
 - none of this is possible when content lives inside an lms database
-- the build already reports missing citations and orphaned files on every run
 -->
 
 ---
+
 <!--
 _backgroundColor: #EEE
 _paginate: false
@@ -963,8 +1021,8 @@ _paginate: false
 ![bg 88%](payoff_search.png)
 > obsidian find & replace
 <!--
-- obsidian global search for "orange" across the whole subject in milliseconds
-- compare: searching an lms means clicking into every page
+- obsidian global search for "slice notation" across the whole subject in milliseconds
+- (compare: searching an lms means clicking into every page)
 -->
 
 ---
@@ -975,7 +1033,7 @@ _paginate: false
 ![bg 77%](payoff_ai_review.png)
 > crush ai agent
 <!--
-- an ai coding agent working on subject source: auditing citation currency, scaffolding a new module
+- an ai coding agent working on subject source
 - impossible against an lms database; trivial against a folder of markdown
 -->
 
@@ -987,8 +1045,8 @@ _paginate: false
 ![bg 83%](payoff_git_history.png)
 > git history
 <!--
-- meaningful version history at last: commit-level answers to "what changed, when, and why"
-- compare with an lms edit log -- if one exists at all
+- meaningful version history using standard tools, allowing for better collaborative work
+- compare with an lms edit log
 -->
 
 ---
