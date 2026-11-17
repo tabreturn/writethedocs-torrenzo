@@ -134,7 +134,7 @@ backgroundColor: maroon
 ## The Problem(s) » Talk Premise
 ### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a subject, <br />but a poor place to <highlight>author</highlight> one.*
 <p>&nbsp;</p>
-<smaller>⚠️<br />At least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
+<smaller>⚠️<br />At least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static site generators, etc.</smaller>
 <!--
 - and another caveat ... [NEXT SLIDE]
 -->
@@ -144,9 +144,9 @@ backgroundColor: maroon
 ## The Problem(s) » Talk Premise
 ### *The (Canvas) LMS is a good place to <highlight>deliver</highlight> a subject, <br />but a poor place to <highlight>author</highlight> one.*
 <p>&nbsp;</p>
-<smaller>⚠️<br />At least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static-site-generators, etc.</smaller>
+<smaller>⚠️<br />At least, this seemed obvious to somebody with some experience working on digital products, popular project documentation systems, LaTeX, static site generators, etc.</smaller>
 <br /><br />
-<smaller>⚠️<br />Third-party Canvas plugins (LTIs) likely address some of my gripes, but require institutional licensing (see money) and IT sign-off, which is prohibitive.</smaller>
+<smaller>⚠️<br />Third-party Canvas LTI integrations likely address some of my gripes, but require institutional licensing (see money) and IT sign-off, which is prohibitive.</smaller>
 
 ---
 
@@ -208,7 +208,7 @@ _paginate: false
     <rect x="952" y="550" width="74" height="65" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 <!--
-- anybody familiar with these kind of documents? explain ...
+- anybody familiar with these kinds of documents? explain ...
 - subject learning outcomes necessary for "constructive alignment" and "curriculum mapping", etc.
 - for example let us focus on s.l.o (a) [CLICK]
 - every single assessment brief [CLICK], grading rubric, module, etc. maps to these ... [NEXT SLIDE]
@@ -228,7 +228,7 @@ _paginate: false
 <!--
 - here's the thing -- there are usually 12 modules ...
 - and each intro sub-module lists its s.l.o mappings
-- lets [CLICK] navigate the first ... [NEXT SLIDE]
+- let's [CLICK] navigate the first ... [NEXT SLIDE]
 -->
 
 ---
@@ -268,7 +268,7 @@ _paginate: false
 
 ## 1. Content Drift » Scenario
 ### *Somebody needs a change to SLO (a) --*
-* Make official change to the learning outline
+* Make an official change to the subject outline
 * Update (potentially) 12 module Intro instances ...
 * And to find these, you'll need to click through every module
 * Then, update (potentially) 3 assessment briefs ...
@@ -332,7 +332,7 @@ _paginate: false
 
 ## 2. Siloed Pages » Scenario 2
 ### *All instances of the term "Twitter" need replacing --*
-* Open a page and search for "Twitter" and replace with "X" ...
+* Open a page and search for "Twitter" and replace it with "X" ...
 * Open the next page and repeat (potentially 12 × 3 times)
 * Then, update (potentially) 3 assessment briefs ...
 * But those briefs are MS Word documents ...
@@ -377,7 +377,7 @@ _paginate: false
 <!---
 - but the grading system is part of the l.m.s configuration, and ...
 - dealing with l.m.s grading rubrics is a fiddly affair
-- critical: you cannot edit them after the submission date --
+- critical: you cannot edit them after they have been reused or used to assess a student --
 - need to be accurate and consistent!
 -->
 
@@ -418,7 +418,7 @@ color: var(--color-background)
 
 ## Solution » Mental Model
 
-Same inversion documentarians use for modern docs portals --
+The same inversion documentarians use for modern docs portals --
 * The (Git?) repository is the *source of truth*
 * A build step *renders the outputs*
 * The website is just the *deployment target*
@@ -514,7 +514,7 @@ _paginate: false
     <rect x="504" y="260" width="530" height="38" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 <!--
-- first step was to device a yaml file for all the subject metadata
+- first step was to devise a yaml file for all the subject metadata
 - as you can see, [CLICK] it includes s.l.o (a)
 - btw, i'm using obsidian here because it looks good ...
 - but any text/code editor will work ... [NEXT SLIDE]
@@ -549,7 +549,7 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 87%](solution_tag_preview.png)
-> torrenzo yaml
+> torrenzo markdown / obsidian dataview preview
 * <svg data-marpit-svg class="absolute">
     <rect x="170" y="205" width="211" height="207" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
@@ -619,7 +619,7 @@ section {
 <!--
 - also includes tags for referencing --
 - this enables torrenzo to insert any in-text citations,
-- along with corresponding refernce list entry (at the page bottom, wikipedia style) 
+- along with a corresponding reference list entry (at the page bottom, wikipedia style)
 - note this is bibtex ... [NEXT SLIDE]
 -->
 
@@ -631,7 +631,7 @@ _paginate: false
 -->
 ![bg 88%](solution_zotero.png)
 <!--
-- meaning you can you any reference management software you like
+- meaning you can use any reference management software you like
 - (this is zotero, but there are mendeley and others)
 -->
 > zotero
@@ -678,7 +678,7 @@ _paginate: false
   </svg>
 <!--
 - recall that briefs used to be word docs, requiring pdf export (straddling source of truth)
-- there also also a tag for [CLICK] includes (inserting file contents in multiple places)
+- there is also a tag for [CLICK] includes (inserting file contents in multiple places)
 - (this works in modules and briefs)
 - here, the [CLICK] academic integrity statement ... 
 - that appears [CLICK] in the assessment briefs (and on multiple pages)
@@ -727,7 +727,7 @@ _paginate: false
   <rect x="366" y="344" width="139" height="88" style="fill:none;stroke:lime;stroke-width:5" />
 </svg>
 <!--
-- this has a g.u.i, although there is also c.l.i mode ... [NEXT SLIDE]
+- this has a g.u.i, although there is also a cli mode ... [NEXT SLIDE]
 -->
 
 ---
@@ -790,12 +790,12 @@ _backgroundColor: #EEE
 _paginate: false
 -->
 ![bg 90%](editing_hot_reload.png)
-> vs.code
+> vs code
 * <svg data-marpit-svg class="absolute">
     <rect x="170" y="85" width="465" height="80" style="fill:none;stroke:lime;stroke-width:5" />
   </svg>
 <!--
-- using vs.code with [CLICK] torrenzo --watch for hot reload preview in browser
+- using vs code with [CLICK] torrenzo --watch for hot reload preview in browser
 - (this is actually the way i always work)
 -->
 
@@ -886,7 +886,7 @@ _paginate: false
 <!--
 - importing on canvas side
 - it has some sensible rules (only overwrites files not manually edited in canvas)
-- (and alerts if/where things that could not overwrite)
+- (and alerts you where things could not be overwritten)
 -->
 > canvas cartridge import
 
@@ -929,7 +929,7 @@ _paginate: false
 ![bg vertical fit](util_banner_pyf.svg)
 ![bg vertical fit](util_banner_cms.svg)
 ![bg vertical fit](util_banner_jsf.svg)
-> util_generate_subtitles.py
+> util_generate_procedural_gfx.py
 <!--
 - procedurally generated module banners: pixel-raster font, per-subject palette, seeded randomness
 - every module page gets a unique banner with zero design time
@@ -988,8 +988,6 @@ color: var(--color-background)
 ---
 
 ## The Payoff » What Improved
-<p>&nbsp;</p>
-
 ### *Speed, Ownership, Maintenance, AI-Assisted Review*
 <!--
 - the pipeline isn't all-or-nothing: teams dial automation up or down per subject
@@ -1009,7 +1007,7 @@ color: var(--color-background)
 🤖 **AI review**
 <smaller>Flag outdated content, references, or material needing clarity</smaller><br /><br />
 <!--
-- none of this is possible when content lives inside an lms database
+- none of this is practical when content lives inside an lms database
 -->
 
 ---
@@ -1034,7 +1032,7 @@ _paginate: false
 > crush ai agent
 <!--
 - an ai coding agent working on subject source
-- impossible against an lms database; trivial against a folder of markdown
+- impractical against an lms database; trivial against a folder of markdown
 -->
 
 ---
@@ -1061,18 +1059,26 @@ color: var(--color-background)
 
 ## What Broke » Quirks & Limitations
 
-* <highlight>Canvas import:</highlight> unexpected overwrite behaviour (not additive),  
-  duplicated assets after re-import
-* <highlight>Image caching:</highlight> images sometimes stop rendering after re-import;  
-  worked around with cache-busting asset suffixes
-* <highlight>Word support:</highlight> weak on the authoring side
-* <highlight>Final 5 percent:</highlight> manual cleanup after each import
-* <highlight>Compliance:</highlight> friction accommodating the university process
-<!--
-- the cartridge import overwriting rather than adding caught us by surprise early on
-- the image-caching bug is still unexplained; renaming assets per build sidesteps it
-- the last 5% is accepted as the cost of the other 95%
--->
+<style scoped>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  padding: 0.5em;
+}
+th {
+  background-color: rgba(255, 255, 255, 0.65);
+  color: darkolivegreen;
+}
+</style>
+
+| Limitation | Impact | Practical response |
+|---|---|---|
+| **Canvas caching** | Re-imported assets don't refresh | Use `--cache-bust` to rename assets and force a refresh |
+| **Word support** | Remains the weakest authoring path | Prefer Markdown as the source format |
+| **Compliance** | Production can be streamlined; approval cannot | Engage with the institutional process early |
 
 ---
 
@@ -1084,16 +1090,19 @@ color: var(--color-background)
 
 ---
 
-## Takeaways
+## Takeaways » Summary
 
 * Treat the LMS as a <highlight>deployment target</highlight>, not an authoring environment
-* The <highlight>repository is the source of truth</highlight>; builds are reproducible
-* Plain text + a build pipeline returns <highlight>ownership, speed, and reviewability</highlight>
-* Expect platform quirks -- budget for a manual final 5 percent
-<!--
-- the workflow is lightweight by design: yaml, markdown, bibtex, and a build script
-- next step for anyone curious: start with one module, not a whole subject
--->
+* Keep the <highlight>repository canonical</highlight>; generated outputs should be reproducible, not precious
+* Plain text unlocks <highlight>search, diffs, automation, and AI-assisted review</highlight> while reducing content drift
+* <highlight>Single-source repeated content</highlight> so one edit updates every module, brief, and rubric
+
+---
+
+## Takeaways » Resources
+
+GitHub repo:  
+<https://github.com/tabreturn/torrenzo>
 
 ---
 
