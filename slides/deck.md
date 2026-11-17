@@ -1092,10 +1092,11 @@ color: var(--color-background)
 
 ## Takeaways » Summary
 
-* Treat the LMS as a <highlight>deployment target</highlight>, not an authoring environment
-* Keep the <highlight>repository canonical</highlight>; generated outputs should be reproducible, not precious
-* Plain text unlocks <highlight>search, diffs, automation, and AI-assisted review</highlight> while reducing content drift
-* <highlight>Single-source repeated content</highlight> so one edit updates every module, brief, and rubric
+* Treat the LMS as a <highlight>deployment target</highlight>, separating content from presentation
+* Keep a <highlight>canonical Git repository</highlight> for version control, diffs, and reproducible outputs
+* <highlight>Single-source content, metadata, and UI components</highlight> to update modules, outcomes, and rubrics everywhere without drift
+* Use <highlight>machine-readable plain text</highlight> to unlock search, local automation, and AI-assisted review
+* Maintain <highlight>editor independence</highlight> (Obsidian, VS Code, Vim, Word) backed by <highlight>adaptable open-source</highlight> tooling
 
 ---
 
