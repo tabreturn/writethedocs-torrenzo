@@ -1,4 +1,4 @@
-https://pretalx.com/wtd-australia-2026/talk/review/U7C8TWZTM8BLVSJCAVPWWXH3K7XPADXT
+<https://pretalx.com/wtd-australia-2026/talk/review/U7C8TWZTM8BLVSJCAVPWWXH3K7XPADXT>
 
 
 # The LMS as a Build Target: Shifting the Source of Truth to a Publishing Pipeline 
@@ -23,14 +23,4 @@ This is an outline for the presentation, open to adjustments if you wish.
 - **The payoff.** Ownership returned to domain experts, updates to rapidly changing content dropped from weeks to minutes, and structured (local) source material enabled AI-assisted review.
 
 - **What broke.** Canvas import quirks included unexpected overwrite behaviour and duplicated assets. Other limitations included weak Microsoft Word support and a manual "final 5 percent" of work after each import. Complications accommodating the university compliance process.
-
-
-### Speaker Bio
-
-I'm a lecturer in UX, web, and interaction design at Torrens University Australia. I spend a lot of time authoring course materials. My background bridges design and software: I began in graphic and interactive design before moving into programming and education. In the Python community, I'm best known as the author of *[Learn Python Visually: Creative Coding with Processing.py](https://nostarch.com/learn-python-visually)* (No Starch Press, 2021), which introduces non-programmers to Python through visual, graphics-based creative coding. I've also contributed substantially to the official documentation of open-source projects, including `p5.js` and the Python library `py5`, and have presented at SIGGRAPH, PyCon, and Processing Foundation events.
-
-
-##
-
-I'm available to present either in person in Melbourne or as part of a prerecorded session with live Q&A.
 
