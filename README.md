@@ -4,9 +4,12 @@
 
 ---
 
+This presentation is a [Marp](https://marp.app) slide deck. You can view the pre-rendered PDF below or render the deck locally for features such as animated bullet points and presenter notes.
+
+
 ## PDF Version
 
-<deck.pdf>
+[deck.pdf](deck.pdf)
 
 
 ## Rendering
