@@ -1,6 +1,6 @@
 # The LMS as a Build Target
 
-*Slide-deck for a Write the Docs talk -- shifting the source of truth for course content out of the LMS and into a plain-text build pipeline ([Torrenzo](https://github.com/tabreturn/torrenzo))*
+*Slides for a [Write the Docs](https://www.writethedocs.org/conf/australia/2026/) talk on moving course content from the LMS to a plain-text build pipeline using [Torrenzo](https://github.com/tabreturn/torrenzo).*
 
 ---
 
