@@ -28,5 +28,5 @@ Export PDF:
 ./render --pdf
 ```
 
-The deck source is `slides/deck.md`; talk notes live in `outline.md`.
+The deck source is `slides/deck.md`; official talk description in `outline.md`.
 
