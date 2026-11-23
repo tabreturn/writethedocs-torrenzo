@@ -1,0 +1,6 @@
+Pillow>=9,<12
+fonttools>=4.40,<5
+Brotli>=1.0
+imageio-ffmpeg>=0.5,<1
+pyttsx3>=2.99,<3
+resvg-py==0.3.2
