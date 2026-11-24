@@ -1,7 +1,0 @@
-.build/
-.venv/
-__pycache__/
-*.py[cod]
-the-lms-as-a-build-target.mp4
-edutech_au_tristan_bunn.srt
-script.txt
