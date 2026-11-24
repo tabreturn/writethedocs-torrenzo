@@ -29,16 +29,3 @@ Export PDF:
 ```
 
 The deck source is `slides/deck.md`; official talk description in `outline.md`.
-
-
-## EDUtech Speaker Video
-
-```bash
-python3 -m venv promo/.venv
-source promo/.venv/bin/activate
-python -m pip install -r promo/requirements.txt
-python promo/build_promo.py
-```
-
-Creates `promo/the-lms-as-a-build-target.mp4`. Edit `promo/vector/*.svg` and `SCENES` in `promo/build_promo.py`.
-
